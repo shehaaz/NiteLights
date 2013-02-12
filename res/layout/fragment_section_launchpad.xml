@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:layout_height="match_parent" >
 
-    <Button
-        android:id="@+id/demo_collection_button"
-        android:layout_width="300dp"
+
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="@string/demo_collection" />
-    
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
         <Button
-        android:id="@+id/demo_external_activity"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="@string/demo_external_activity" />
+            android:id="@+id/demo_collection_button"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/demo_collection" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/demo_external_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/demo_external_activity" />
+    </LinearLayout>
+
+</FrameLayout>
