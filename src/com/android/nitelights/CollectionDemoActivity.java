@@ -7,8 +7,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.app.NavUtils;
-import android.support.v4.app.TaskStackBuilder;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -41,21 +39,15 @@ public class CollectionDemoActivity extends FragmentActivity {
 	}
 	
 	//This hook is called whenever an item in your opetions menu is selected
-	public boolean onOptionItemSelected(MenuItem item){
+	public boolean onOptionsItemSelected(MenuItem item) {
 		
 		switch(item.getItemId()){
 		case android.R.id.home:
-			//when home is clicked the user is sent to the MainActivity
-			Intent upIntent = new Intent(this, MainActivity.class);
-			if(NavUtils.shouldUpRecreateTask(this, upIntent)) {
-				TaskStackBuilder.create(getApplicationContext());
-				finish();
-			}else {
-				NavUtils.navigateUpTo(this, upIntent);
-			}
-			return true;
+				Intent upIntent = new Intent(this, MainActivity.class);
+				startActivity(upIntent);
+				break;
 		}
-		return super.onOptionsItemSelected(item);
+		return true;
 	}
 	
 	/**
