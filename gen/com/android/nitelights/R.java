@@ -32,6 +32,7 @@ public final class R {
         public static final int fragment_section_dummy=0x7f030003;
         public static final int fragment_section_launchpad=0x7f030004;
         public static final int profile=0x7f030005;
+        public static final int venues=0x7f030006;
     }
     public static final class menu {
         public static final int activity_collection_demo=0x7f060000;

@@ -109,8 +109,9 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 				//This is the profile page
 				Fragment profileFragment = new ProfileFragment();
 				return profileFragment;
-//			case 2:
-//				//This is the Venues page
+			case 2:
+				Fragment venueFragment = new VenueFragment();
+				return venueFragment;
 				
 //			case 3: 	
 //				//This is the Friends page
@@ -151,6 +152,19 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 			return rootView;
 		}
 	}
+	
+	/**
+	 * Venue fragment
+	 */
+	public static class VenueFragment extends Fragment{
+		
+		public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+			View rootView = inflater.inflate(R.layout.venues,container, false);
+			return rootView;
+		}
+	}
+	
+	
 	/**
 	 * a fragment that launches other parts of the demo application
 	 */
