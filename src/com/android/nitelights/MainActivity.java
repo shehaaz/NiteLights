@@ -102,9 +102,19 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 
 			switch(i) {
 
-			case 0:
-				//this is the first page with the buttons that takes the user to the demos
-				return new LaunchpadSectionFragment();
+//			case 0:
+//				//This is the Wire
+
+			case 1:
+				//This is the profile page
+				Fragment profileFragment = new ProfileFragment();
+				return profileFragment;
+//			case 2:
+//				//This is the Venues page
+				
+//			case 3: 	
+//				//This is the Friends page
+				
 			default:
 				//dummy place holders
 				Fragment fragment = new DummySectionFragment();
@@ -130,6 +140,17 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 		}
 	}
 	
+	
+	/**
+	 * Profile fragment
+	 */
+	public static class ProfileFragment extends Fragment{
+		
+		public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+			View rootView = inflater.inflate(R.layout.profile,container, false);
+			return rootView;
+		}
+	}
 	/**
 	 * a fragment that launches other parts of the demo application
 	 */

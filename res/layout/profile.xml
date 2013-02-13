@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:paddingTop="10dip" >
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/profile_picture"
+        android:src="@drawable/profile_picture" />
+
+    <TableLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" >
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/profileFirstName"
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="@string/profile_first_name"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/profileLastName"
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="@string/profile_last_name"
+                android:textColor="#000000" />
+        </TableRow>
+    </TableLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dip" >
+
+        <Button
+            android:id="@+id/buttonSignOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/logout" />
+    </RelativeLayout>
+
+</LinearLayout>
