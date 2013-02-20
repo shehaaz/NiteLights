@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- Venue Title -->
+    <TextView
+        android:id="@+id/title_venue"
+        android:text="@string/title_venue" 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dip"
+        android:paddingLeft="8dip"
+        android:paddingBottom="4dip"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    
+    <!-- Venue Address -->
+    <TextView
+        android:id="@+id/title_venue_address"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="6dip"
+        android:paddingLeft="8dip"
+        android:text="@string/title_venue_address"
+        android:textSize="15sp" />
+
+</LinearLayout>

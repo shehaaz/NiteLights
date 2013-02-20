@@ -117,12 +117,11 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 //				//This is the Wire
 
 			case 1:
-				//This is the profile page
-				Fragment profileFragment = new ProfileFragment();
-				return profileFragment;
-			case 2:
 				Fragment venueFragment = new VenuesFragment();
 				return venueFragment;
+			case 2:
+				Fragment profileFragment = new ProfileFragment();
+				return profileFragment;
 				
 //			case 3: 	
 //				//This is the Map page

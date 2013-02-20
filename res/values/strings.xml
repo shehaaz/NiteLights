@@ -16,5 +16,7 @@
     <string name="title_profile">Profile</string>
     <string name="title_venues">Venues</string>
     <string name="title_map">Map</string>
+    <string name="title_venue_address">666 Hell Street</string>
+    <string name="title_venue">Devil Joint</string>
 
 </resources>
