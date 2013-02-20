@@ -10,46 +10,107 @@ package com.android.nitelights;
 public final class R {
     public static final class attr {
     }
+    public static final class dimen {
+        public static final int action_button_min_width=0x7f050008;
+        public static final int announcements_margin_width=0x7f05000e;
+        public static final int content_padding_normal=0x7f050010;
+        /**  body content 
+         */
+        public static final int element_spacing_normal=0x7f05000f;
+        public static final int list_extra_button_width=0x7f050007;
+        public static final int list_scroll_top_offset=0x7f05000b;
+        public static final int map_multipane_right_padding=0x7f05000d;
+        public static final int multipane_half_padding=0x7f050009;
+        public static final int multipane_padding=0x7f05000a;
+        public static final int page_margin_width=0x7f050006;
+        public static final int schedule_block_time_width=0x7f05000c;
+        public static final int speaker_image_padding=0x7f050017;
+        public static final int speaker_image_size=0x7f050016;
+        public static final int stream_content_text_size=0x7f05001b;
+        public static final int stream_fav_icon_size=0x7f05001d;
+        public static final int stream_feedback_text_size=0x7f05001c;
+        /**  Google+ 
+         */
+        public static final int stream_name_text_size=0x7f050019;
+        public static final int stream_original_author_name_text_size=0x7f05001a;
+        public static final int tab_height=0x7f050003;
+        public static final int text_size_diff_large_small=0x7f050015;
+        public static final int text_size_large=0x7f050013;
+        public static final int text_size_medium=0x7f050012;
+        public static final int text_size_small=0x7f050011;
+        public static final int text_size_xlarge=0x7f050014;
+        public static final int track_icon_padding=0x7f050005;
+        public static final int track_icon_width=0x7f050004;
+        public static final int vendor_image_size=0x7f050018;
+        public static final int whats_on_button_right_padding=0x7f050002;
+        /**  UI elements 
+         */
+        public static final int whats_on_height=0x7f050000;
+        public static final int whats_on_item_padding=0x7f050001;
+        /**  Widget 
+         */
+        public static final int widget_margin=0x7f05001e;
+    }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
-        public static final int profile_picture=0x7f020001;
+        public static final int activatable_item_background=0x7f020000;
+        public static final int grey_background=0x7f020001;
+        public static final int grey_border_inset_r=0x7f020002;
+        public static final int grey_frame=0x7f020003;
+        public static final int ic_launcher=0x7f020004;
+        public static final int item_activated=0x7f020005;
+        public static final int item_checked=0x7f020006;
+        public static final int item_focused=0x7f020007;
+        public static final int item_pressed=0x7f020008;
+        public static final int list_extra_button_background=0x7f020009;
+        public static final int list_extra_button_left_border=0x7f02000a;
+        public static final int profile_picture=0x7f02000b;
+        public static final int schedule_time_background=0x7f02000c;
     }
     public static final class id {
-        public static final int buttonSignOut=0x7f070007;
-        public static final int demo_collection_button=0x7f070002;
-        public static final int demo_external_activity=0x7f070003;
-        public static final int logo=0x7f070004;
-        public static final int menu_settings=0x7f070008;
-        public static final int pager=0x7f070000;
-        public static final int pager_title_strip=0x7f070001;
-        public static final int profileFirstName=0x7f070005;
-        public static final int profileLastName=0x7f070006;
+        public static final int buttonSignOut=0x7f090009;
+        public static final int demo_collection_button=0x7f090003;
+        public static final int demo_external_activity=0x7f090004;
+        public static final int list_item_schedule_header_textview=0x7f090005;
+        public static final int logo=0x7f090006;
+        public static final int menu_settings=0x7f09000a;
+        public static final int pager=0x7f090000;
+        public static final int pager_title_strip=0x7f090001;
+        public static final int profileFirstName=0x7f090007;
+        public static final int profileLastName=0x7f090008;
+        public static final int root_container=0x7f090002;
     }
     public static final class layout {
         public static final int activity_collection_demo=0x7f030000;
         public static final int activity_main=0x7f030001;
-        public static final int fragment_collection_object=0x7f030002;
-        public static final int fragment_section_dummy=0x7f030003;
-        public static final int fragment_section_launchpad=0x7f030004;
-        public static final int profile=0x7f030005;
-        public static final int venues=0x7f030006;
+        public static final int activity_singlepane_empty=0x7f030002;
+        public static final int empty_waiting_for_sync=0x7f030003;
+        public static final int fragment_collection_object=0x7f030004;
+        public static final int fragment_list_with_empty_container=0x7f030005;
+        public static final int fragment_section_dummy=0x7f030006;
+        public static final int fragment_section_launchpad=0x7f030007;
+        public static final int list_item_the_wire_header=0x7f030008;
+        public static final int profile=0x7f030009;
+        public static final int venues=0x7f03000a;
     }
     public static final class menu {
-        public static final int activity_collection_demo=0x7f060000;
-        public static final int activity_main=0x7f060001;
+        public static final int activity_collection_demo=0x7f080000;
+        public static final int activity_main=0x7f080001;
+    }
+    public static final class raw {
+        public static final int venues=0x7f040000;
     }
     public static final class string {
-        public static final int app_name=0x7f040000;
-        public static final int demo_collection=0x7f040004;
-        public static final int demo_external_activity=0x7f040005;
-        public static final int dummy_section_text=0x7f040006;
-        public static final int hello_world=0x7f040001;
-        public static final int logout=0x7f04000a;
-        public static final int menu_settings=0x7f040002;
-        public static final int profile_first_name=0x7f040007;
-        public static final int profile_last_name=0x7f040008;
-        public static final int profile_picture=0x7f040009;
-        public static final int title_activity_collection_demo=0x7f040003;
+        public static final int app_name=0x7f060000;
+        public static final int demo_collection=0x7f060004;
+        public static final int demo_external_activity=0x7f060005;
+        public static final int dummy_section_text=0x7f060006;
+        public static final int hello_world=0x7f060001;
+        public static final int logout=0x7f06000a;
+        public static final int menu_settings=0x7f060002;
+        public static final int profile_first_name=0x7f060007;
+        public static final int profile_last_name=0x7f060008;
+        public static final int profile_picture=0x7f060009;
+        public static final int title_activity_collection_demo=0x7f060003;
     }
     public static final class style {
         /** 
@@ -73,10 +134,10 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f050000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f050001;
+        public static final int AppTheme=0x7f070001;
     }
 }
