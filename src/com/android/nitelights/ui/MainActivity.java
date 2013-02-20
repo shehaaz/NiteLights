@@ -20,7 +20,7 @@ import com.android.nitelights.R;
 /**
  * 
  * @author Shehaaz
- *The starting point of the application
+ *The starting point of the application. It branches to the other view Fragments in the package
  */
 
 public class MainActivity extends FragmentActivity implements ActionBar.TabListener {
