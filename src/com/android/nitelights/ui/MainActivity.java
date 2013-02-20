@@ -1,4 +1,5 @@
-package com.android.nitelights;
+package com.android.nitelights.ui;
+
 
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
@@ -15,6 +16,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import com.android.nitelights.R;
 /**
  * 
  * @author Shehaaz
@@ -28,8 +30,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	 * ViewPager(Layout manager that allows the user to flip left and right through pages of data)
 	 */		 
 	ViewPager mViewPager;
-	static final int NUM_SECTIONS = 4;
-	private static String[] Sections = {"The Wire", "Profile", "Venues", "Friends"};
+
 
 	@SuppressLint("NewApi") @Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -63,10 +64,18 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 			}
 		});
 
-		//for each of the sections in the app, add a tab to the action bar.
-		for(int i = 0; i<mAppSectionsPagerAdapter.getCount(); i++){
-			actionBar.addTab(actionBar.newTab().setText(mAppSectionsPagerAdapter.getPageTitle(i)).setTabListener(this));		
-		}
+		actionBar.addTab(actionBar.newTab()
+                .setText(R.string.title_the_wire)
+                .setTabListener(this));
+        actionBar.addTab(actionBar.newTab()
+                .setText(R.string.title_venues)
+                .setTabListener(this));
+        actionBar.addTab(actionBar.newTab()
+                .setText(R.string.title_profile)
+                .setTabListener(this));
+        actionBar.addTab(actionBar.newTab()
+                .setText(R.string.title_map)
+                .setTabListener(this));
 	}
 
 
@@ -93,6 +102,8 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	 */
 	public static class AppSectionsPagerAdapter extends FragmentPagerAdapter {
 
+		private static final int NUM_SECTIONS = 4;
+
 		public AppSectionsPagerAdapter(FragmentManager fm) {
 			super(fm);
 		}
@@ -110,11 +121,11 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 				Fragment profileFragment = new ProfileFragment();
 				return profileFragment;
 			case 2:
-				Fragment venueFragment = new VenueFragment();
+				Fragment venueFragment = new VenuesFragment();
 				return venueFragment;
 				
 //			case 3: 	
-//				//This is the Friends page
+//				//This is the Map page
 				
 			default:
 				//dummy place holders
@@ -136,33 +147,10 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 			return NUM_SECTIONS;
 		}
 
-		public CharSequence getPageTitle(int position){
-			return Sections[position];
-		}
-	}
+}
 	
 	
-	/**
-	 * Profile fragment
-	 */
-	public static class ProfileFragment extends Fragment{
-		
-		public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-			View rootView = inflater.inflate(R.layout.profile,container, false);
-			return rootView;
-		}
-	}
-	
-	/**
-	 * Venue fragment
-	 */
-	public static class VenueFragment extends Fragment{
-		
-		public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-			View rootView = inflater.inflate(R.layout.venues,container, false);
-			return rootView;
-		}
-	}
+
 	
 	
 	/**

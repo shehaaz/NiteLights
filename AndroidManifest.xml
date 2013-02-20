@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.android.nitelights.MainActivity"
+            android:name="com.android.nitelights.ui.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.android.nitelights.CollectionDemoActivity"
+            android:name="com.android.nitelights.ui.CollectionDemoActivity"
             android:label="@string/title_activity_collection_demo" >
         </activity>
     </application>

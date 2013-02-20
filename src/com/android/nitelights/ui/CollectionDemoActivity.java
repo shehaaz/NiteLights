@@ -1,4 +1,4 @@
-package com.android.nitelights;
+package com.android.nitelights.ui;
 
 import android.app.ActionBar;
 import android.content.Intent;
@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import com.android.nitelights.R;
 
 
 public class CollectionDemoActivity extends FragmentActivity {
