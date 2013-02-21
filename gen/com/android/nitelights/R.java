@@ -243,19 +243,20 @@ containing a value of this type.
         public static final int com_facebook_top_background=0x7f02001d;
         public static final int com_facebook_top_button=0x7f02001e;
         public static final int com_facebook_usersettingsfragment_background_gradient=0x7f02001f;
-        public static final int grey_background=0x7f020020;
-        public static final int grey_border_inset_r=0x7f020021;
-        public static final int grey_frame=0x7f020022;
-        public static final int ic_launcher=0x7f020023;
-        public static final int icon=0x7f020024;
-        public static final int item_activated=0x7f020025;
-        public static final int item_checked=0x7f020026;
-        public static final int item_focused=0x7f020027;
-        public static final int item_pressed=0x7f020028;
-        public static final int list_extra_button_background=0x7f020029;
-        public static final int list_extra_button_left_border=0x7f02002a;
-        public static final int profile_picture=0x7f02002b;
-        public static final int schedule_time_background=0x7f02002c;
+        public static final int discoball=0x7f020020;
+        public static final int grey_background=0x7f020021;
+        public static final int grey_border_inset_r=0x7f020022;
+        public static final int grey_frame=0x7f020023;
+        public static final int ic_launcher=0x7f020024;
+        public static final int icon=0x7f020025;
+        public static final int item_activated=0x7f020026;
+        public static final int item_checked=0x7f020027;
+        public static final int item_focused=0x7f020028;
+        public static final int item_pressed=0x7f020029;
+        public static final int list_extra_button_background=0x7f02002a;
+        public static final int list_extra_button_left_border=0x7f02002b;
+        public static final int profile_picture=0x7f02002c;
+        public static final int schedule_time_background=0x7f02002d;
     }
     public static final class id {
         public static final int buttonSignOut=0x7f050024;
@@ -283,7 +284,7 @@ containing a value of this type.
         public static final int large=0x7f050002;
         public static final int list_item_schedule_header_textview=0x7f05001d;
         public static final int logo=0x7f050021;
-        public static final int menu_settings=0x7f050025;
+        public static final int menu_settings=0x7f05002d;
         public static final int normal=0x7f050001;
         public static final int pager=0x7f050003;
         public static final int pager_title_strip=0x7f050004;
@@ -296,6 +297,14 @@ containing a value of this type.
         public static final int text=0x7f050020;
         public static final int title_venue=0x7f05001e;
         public static final int title_venue_address=0x7f05001f;
+        public static final int widget39=0x7f05002c;
+        public static final int widget40=0x7f050029;
+        public static final int widget42=0x7f050028;
+        public static final int widget43=0x7f05002a;
+        public static final int widget44=0x7f050027;
+        public static final int widget46=0x7f050026;
+        public static final int widget47=0x7f05002b;
+        public static final int widget48=0x7f050025;
     }
     public static final class layout {
         public static final int activity_collection_demo=0x7f030000;
@@ -321,9 +330,10 @@ containing a value of this type.
         public static final int fragment_section_launchpad=0x7f030014;
         public static final int list_item_the_wire_header=0x7f030015;
         public static final int list_item_venues=0x7f030016;
-        public static final int main=0x7f030017;
-        public static final int profile=0x7f030018;
-        public static final int venues=0x7f030019;
+        public static final int list_venues=0x7f030017;
+        public static final int main=0x7f030018;
+        public static final int profile=0x7f030019;
+        public static final int venues=0x7f03001a;
     }
     public static final class menu {
         public static final int activity_collection_demo=0x7f0a0000;
@@ -379,6 +389,8 @@ containing a value of this type.
         public static final int title_the_wire=0x7f060029;
         public static final int title_venue=0x7f06002e;
         public static final int title_venue_address=0x7f06002d;
+        public static final int title_venue_num_commits=0x7f060030;
+        public static final int title_venue_rating=0x7f06002f;
         public static final int title_venues=0x7f06002b;
     }
     public static final class style {
