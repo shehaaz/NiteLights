@@ -43,6 +43,7 @@ public class VenuesFragment extends ListFragment{
 		    ArrayAdapter<String> adapter_address = new ArrayAdapter<String>(getActivity(),
 			        R.layout.list_item_venues, R.id.title_venue_address, title_venue_address);
 			setListAdapter(adapter_address);
+			//hello
 	}
 
 }
