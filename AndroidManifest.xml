@@ -26,6 +26,10 @@
             android:name="com.android.nitelights.ui.CollectionDemoActivity"
             android:label="@string/title_activity_collection_demo" >
         </activity>
+        <activity
+            android:name="com.android.nitelights.ui.VenuesFragment$VenuesActivity"
+            android:label="@string/title_venues">"
+        </activity>
     </application>
 
 </manifest>
