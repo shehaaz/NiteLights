@@ -28,7 +28,7 @@
         </activity>
         <activity
             android:name="com.android.nitelights.ui.VenuesFragment$VenuesActivity"
-            android:label="@string/title_venues">"
+            android:label="@string/title_venues">
         </activity>
     </application>
 
