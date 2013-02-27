@@ -1,5 +1,7 @@
 package com.android.nitelights.ui;
-
+/**
+ * Creates new Venue objects
+ */
 public class VenuesFactory {
 	
 	private String title;

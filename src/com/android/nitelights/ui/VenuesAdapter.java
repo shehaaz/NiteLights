@@ -9,7 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-
+/**
+ * Extends the ArrayAdapter to take in VenueFactory objects (To obtain title and address)
+ */
 public class VenuesAdapter extends ArrayAdapter<VenuesFactory>{
 	
 	Context context;
