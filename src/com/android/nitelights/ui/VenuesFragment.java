@@ -30,19 +30,24 @@ public class VenuesFragment extends ListFragment{
 	public void onViewCreated(View view, Bundle savedInstanceState){
 		super.onViewCreated(view, savedInstanceState);
 		
-		String[] title_venue = new String[] { "Light Ultra Club", "Stereo Night Club", "Club La Boom Montreal",
-		        "Altitude 737", "Bar Downtown", "Bains Douches", "Radio Lounge", "1234 Club",
-		        "Bar Salon Officiel", "Tokyo Bar" };
-		    ArrayAdapter<String> adapter_name = new ArrayAdapter<String>(getActivity(),
-		        R.layout.list_item_venues, R.id.title_venue, title_venue);
-		    setListAdapter(adapter_name);
+
+		VenuesFactory venue_data[] = new VenuesFactory[]{
+				new VenuesFactory("Light Ultra Club","2020 Crescent Street, Montreal, QC, Canada"),
+				new VenuesFactory("Stereo Night Club","858 Sainte-Catherine St E, Montreal, QC, Canada"),
+				new VenuesFactory("Club La Boom Montreal","1254 Rue Stanley, Montreal, QC, Canada"),
+				new VenuesFactory("Altitude 737","1 Place Ville Marie, Montreal, Canada"),
+				new VenuesFactory("Bar Downtown", "1196 Sainte-Catherine West, Montreal, QC, Canada"),
+				new VenuesFactory("Bains Douches","390 Saint-Jacques Old MTL, Montreal, QC, Canada"),
+				new VenuesFactory("Radio Lounge","3553 Saint Laurent Boulevard, Montreal, QC, Canada"),
+				new VenuesFactory("1234 Club","1234 Rue de la Montagne, Montreal, QC, Canada"),
+				new VenuesFactory("Bar Salon Officiel","351 Rue Roy Est, Montreal, QC, Canada"),
+				new VenuesFactory("Tokyo Bar","3709 Saint Laurent Boulevard, Montreal, QC, Canada")	
+		};
+		
+		VenuesAdapter adapter = new VenuesAdapter(getActivity(), R.layout.list_item_venues, venue_data);
 		    
-		    String[] title_venue_address = new String[] { "2020 Crescent Street, Montreal, QC, Canada", "858 Sainte-Catherine St E, Montreal, QC, Canada", "1254 Rue Stanley, Montreal, QC, Canada",
-			        "1 Place Ville Marie, Montreal, Canada", "1196 Sainte-Catherine West, Montreal, QC, Canada", "390 Saint-Jacques Old MTL, Montreal, QC, Canada", "3553 Saint Laurent Boulevard, Montreal, QC, Canada", "1234 Rue de la Montagne, Montreal, QC, Canada",
-			        "351 Rue Roy Est, Montreal, QC, Canada", "3709 Saint Laurent Boulevard, Montreal, QC, Canada" };
-		    ArrayAdapter<String> adapter_address = new ArrayAdapter<String>(getActivity(),
-			        R.layout.list_item_venues, R.id.title_venue_address, title_venue_address);
-			setListAdapter(adapter_address);
+		setListAdapter(adapter);
+
 	}
 
 }
