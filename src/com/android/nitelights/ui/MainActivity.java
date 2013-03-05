@@ -28,6 +28,8 @@ import com.android.nitelights.R;
 public class MainActivity extends FragmentActivity implements ActionBar.TabListener {
 
 	AppSectionsPagerAdapter mAppSectionsPagerAdapter;
+
+	
 	/**
 	 * ViewPager(Layout manager that allows the user to flip left and right through pages of data)
 	 */		 

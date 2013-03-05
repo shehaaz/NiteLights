@@ -8,7 +8,10 @@ import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.nitelights.R;
 
@@ -30,6 +33,7 @@ public class VenuesFragment extends ListFragment{
 	public void onViewCreated(View view, Bundle savedInstanceState){
 		super.onViewCreated(view, savedInstanceState);
 		
+		
 
 		VenuesFactory venue_data[] = new VenuesFactory[]{
 				new VenuesFactory("Light Ultra Club","2020 Crescent Street, Montreal, QC, Canada"),
@@ -47,7 +51,16 @@ public class VenuesFragment extends ListFragment{
 		VenuesAdapter adapter = new VenuesAdapter(getActivity(), R.layout.list_item_venues, venue_data);
 		    
 		setListAdapter(adapter);
-
+		
+	}
+	
+	@Override
+	public void onListItemClick(ListView l, View v, int position, long id)
+	{
+		LinearLayout parent = (LinearLayout) v;
+		TextView t = (TextView) parent.findViewById(R.id.title_venue);
+		String result = "Committed to "+(String) t.getText();
+		Toast.makeText(getActivity(), result, Toast.LENGTH_SHORT).show();
 	}
 
 }

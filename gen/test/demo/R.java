@@ -8,7 +8,7 @@ package test.demo;
 
 public final class R {
 	public static final class id {
-		public static final int text = 0x7f050020;
+		public static final int text = 0x7f050022;
 	}
 	public static final class string {
 		public static final int sharedpreferences_name = 0x7f06001b;
@@ -22,6 +22,6 @@ public final class R {
 		public static final int main = 0x7f030018;
 	}
 	public static final class drawable {
-		public static final int icon = 0x7f020025;
+		public static final int icon = 0x7f020026;
 	}
 }
