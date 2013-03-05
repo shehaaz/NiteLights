@@ -3,11 +3,13 @@ package com.android.nitelights.ui;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -23,6 +25,7 @@ import com.android.nitelights.R;
 public class VenuesFragment extends ListFragment{
 
 	static ArrayList<HashMap<String, String>> venueList;
+	
 
 
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
@@ -58,9 +61,19 @@ public class VenuesFragment extends ListFragment{
 	public void onListItemClick(ListView l, View v, int position, long id)
 	{
 		LinearLayout parent = (LinearLayout) v;
+		ImageView icon = (ImageView) parent.findViewById(R.id.listitem_icon);
+		
+		boolean isDiscoball = icon.getDrawable().getConstantState().equals(getResources().getDrawable(R.drawable.discoball).getConstantState());
 		TextView t = (TextView) parent.findViewById(R.id.title_venue);
-		String result = "Committed to "+(String) t.getText();
-		Toast.makeText(getActivity(), result, Toast.LENGTH_SHORT).show();
+		if(isDiscoball){
+			icon.setImageResource(R.drawable.discoball_trans);
+			String result = "Committed to "+(String) t.getText();
+			Toast.makeText(getActivity(), result, Toast.LENGTH_SHORT).show();
+		}
+		else{
+			icon.setImageResource(R.drawable.discoball);
+			String result = "Uncommitted from "+(String) t.getText();
+			Toast.makeText(getActivity(), result, Toast.LENGTH_SHORT).show();
+		}
 	}
-
 }
