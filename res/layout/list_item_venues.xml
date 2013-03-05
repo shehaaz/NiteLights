@@ -2,8 +2,10 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/tableLayout1"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" 
-    android:background="#ffffff">
+    android:layout_height="fill_parent"
+    android:background="#ffffff" >
+
+
 
     <TableRow>
 
@@ -12,7 +14,6 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="4dip"
-            android:paddingLeft="8dip"
             android:paddingTop="8dip"
             android:text="@string/title_venue"
             android:textSize="20sp"
@@ -30,17 +31,19 @@
             android:text="@string/title_venue_address"
             android:textSize="15sp" />
     </TableRow>
-
-
-
-        <ImageView
-            android:id="@+id/listitem_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:maxHeight="32dp"
-            android:maxWidth="32dp"
-            android:src="@drawable/discoball" />
-
- 
+    
+    <ImageView
+        android:id="@+id/star_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/five_star" />
+    
+    <ImageView
+        android:id="@+id/listitem_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxHeight="32dp"
+        android:maxWidth="32dp"
+        android:src="@drawable/discoball" />
 
 </TableLayout>
