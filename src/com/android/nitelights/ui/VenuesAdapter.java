@@ -1,7 +1,5 @@
 package com.android.nitelights.ui;
 
-import com.android.nitelights.R;
-
 import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
+import com.android.nitelights.R;
 /**
  * Extends the ArrayAdapter to take in VenueFactory objects (To obtain title and address)
  */
@@ -48,7 +48,6 @@ public class VenuesAdapter extends ArrayAdapter<VenuesFactory>{
 		VenuesFactory venue = venueFactory[position];
 		holder.venueTitle.setText(venue.getTitle());
 		holder.venueAddress.setText(venue.getAddress());
-		
 		return row;
 	}
 	

@@ -244,20 +244,21 @@ containing a value of this type.
         public static final int com_facebook_top_button=0x7f02001e;
         public static final int com_facebook_usersettingsfragment_background_gradient=0x7f02001f;
         public static final int discoball=0x7f020020;
-        public static final int grey_background=0x7f020021;
-        public static final int grey_border_inset_r=0x7f020022;
-        public static final int grey_frame=0x7f020023;
-        public static final int ic_launcher=0x7f020024;
-        public static final int ic_launcher1=0x7f020025;
-        public static final int icon=0x7f020026;
-        public static final int item_activated=0x7f020027;
-        public static final int item_checked=0x7f020028;
-        public static final int item_focused=0x7f020029;
-        public static final int item_pressed=0x7f02002a;
-        public static final int list_extra_button_background=0x7f02002b;
-        public static final int list_extra_button_left_border=0x7f02002c;
-        public static final int profile_picture=0x7f02002d;
-        public static final int schedule_time_background=0x7f02002e;
+        public static final int discoball_trans=0x7f020021;
+        public static final int grey_background=0x7f020022;
+        public static final int grey_border_inset_r=0x7f020023;
+        public static final int grey_frame=0x7f020024;
+        public static final int ic_launcher=0x7f020025;
+        public static final int ic_launcher1=0x7f020026;
+        public static final int icon=0x7f020027;
+        public static final int item_activated=0x7f020028;
+        public static final int item_checked=0x7f020029;
+        public static final int item_focused=0x7f02002a;
+        public static final int item_pressed=0x7f02002b;
+        public static final int list_extra_button_background=0x7f02002c;
+        public static final int list_extra_button_left_border=0x7f02002d;
+        public static final int profile_picture=0x7f02002e;
+        public static final int schedule_time_background=0x7f02002f;
     }
     public static final class id {
         public static final int buttonSignOut=0x7f050026;
