@@ -28,6 +28,7 @@ import com.android.nitelights.R;
 public class MainActivity extends FragmentActivity implements ActionBar.TabListener {
 
 	AppSectionsPagerAdapter mAppSectionsPagerAdapter;
+	
 
 	
 	/**
@@ -40,7 +41,11 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
 
+		
+		
+		
 		//Create the adapter that will return a Fragment(A Fragment is a piece of an application's
 		//user interface or behavior that can be placed in an Activity) 
 		//for each of the three primary sections of the app
@@ -271,5 +276,6 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 		}
 	}
 	
+
 
 }

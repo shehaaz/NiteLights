@@ -25,11 +25,13 @@ import com.android.nitelights.R;
 public class VenuesFragment extends ListFragment{
 
 	static ArrayList<HashMap<String, String>> venueList;
+
 	
 
 
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
 		View rootView = inflater.inflate(R.layout.list_venues,container, false);
+
 		return rootView;
 	}
 	
@@ -39,16 +41,16 @@ public class VenuesFragment extends ListFragment{
 		
 
 		VenuesFactory venue_data[] = new VenuesFactory[]{
-				new VenuesFactory("Light Ultra Club","2020 Crescent Street, Montreal, QC, Canada"),
-				new VenuesFactory("Stereo Night Club","858 Sainte-Catherine St E, Montreal, QC, Canada"),
-				new VenuesFactory("Club La Boom Montreal","1254 Rue Stanley, Montreal, QC, Canada"),
-				new VenuesFactory("Altitude 737","1 Place Ville Marie, Montreal, Canada"),
-				new VenuesFactory("Bar Downtown", "1196 Sainte-Catherine West, Montreal, QC, Canada"),
-				new VenuesFactory("Bains Douches","390 Saint-Jacques Old MTL, Montreal, QC, Canada"),
-				new VenuesFactory("Radio Lounge","3553 Saint Laurent Boulevard, Montreal, QC, Canada"),
-				new VenuesFactory("1234 Club","1234 Rue de la Montagne, Montreal, QC, Canada"),
-				new VenuesFactory("Bar Salon Officiel","351 Rue Roy Est, Montreal, QC, Canada"),
-				new VenuesFactory("Tokyo Bar","3709 Saint Laurent Boulevard, Montreal, QC, Canada")	
+				new VenuesFactory("Light Ultra Club","2020 Crescent Street, Montreal, QC, Canada", R.drawable.one_star),
+				new VenuesFactory("Stereo Night Club","858 Sainte-Catherine St E, Montreal, QC, Canada", R.drawable.two_star),
+				new VenuesFactory("Club La Boom Montreal","1254 Rue Stanley, Montreal, QC, Canada", R.drawable.three_half_star),
+				new VenuesFactory("Altitude 737","1 Place Ville Marie, Montreal, Canada", R.drawable.five_star),
+				new VenuesFactory("Bar Downtown", "1196 Sainte-Catherine West, Montreal, QC, Canada", R.drawable.four_star),
+				new VenuesFactory("Bains Douches","390 Saint-Jacques Old MTL, Montreal, QC, Canada", R.drawable.four_half_star),
+				new VenuesFactory("Radio Lounge","3553 Saint Laurent Boulevard, Montreal, QC, Canada", R.drawable.one_star),
+				new VenuesFactory("1234 Club","1234 Rue de la Montagne, Montreal, QC, Canada", R.drawable.one_half_star),
+				new VenuesFactory("Bar Salon Officiel","351 Rue Roy Est, Montreal, QC, Canada", R.drawable.five_star),
+				new VenuesFactory("Tokyo Bar","3709 Saint Laurent Boulevard, Montreal, QC, Canada", R.drawable.three_star)	
 		};
 		
 		VenuesAdapter adapter = new VenuesAdapter(getActivity(), R.layout.list_item_venues, venue_data);
@@ -57,6 +59,7 @@ public class VenuesFragment extends ListFragment{
 		
 	}
 	
+
 	@Override
 	public void onListItemClick(ListView l, View v, int position, long id)
 	{

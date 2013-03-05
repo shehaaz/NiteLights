@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.nitelights.R;
@@ -38,21 +39,25 @@ public class VenuesAdapter extends ArrayAdapter<VenuesFactory>{
 			holder = new VenueHolder();
 			holder.venueTitle = (TextView) row.findViewById(R.id.title_venue);
 			holder.venueAddress = (TextView) row.findViewById(R.id.title_venue_address);
+			holder.venueRating = (ImageView) row.findViewById(R.id.star_icon);
+
 			
 			row.setTag(holder);
 		}
 		else{
 			holder = (VenueHolder)row.getTag();
 		}
-		
+		//For every venue is the list. set Title, address and rating
 		VenuesFactory venue = venueFactory[position];
 		holder.venueTitle.setText(venue.getTitle());
 		holder.venueAddress.setText(venue.getAddress());
+		holder.venueRating.setImageResource(venue.getRating());
 		return row;
 	}
 	
 	static class VenueHolder{
 		TextView venueTitle;
 		TextView venueAddress;
+		ImageView venueRating;
 	}
 }
