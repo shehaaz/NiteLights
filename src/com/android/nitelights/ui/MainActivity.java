@@ -88,9 +88,9 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 		actionBar.addTab(actionBar.newTab()
 				.setText(R.string.title_profile)
 				.setTabListener(this));
-		actionBar.addTab(actionBar.newTab()
-				.setText(R.string.title_map)
-				.setTabListener(this));
+//		actionBar.addTab(actionBar.newTab()
+//				.setText(R.string.title_map)
+//				.setTabListener(this));
 	}
 
 
@@ -138,9 +138,9 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 				Fragment profileFragment = new ProfileFragment();
 				return profileFragment;
 
-			case 3: 	
-				Fragment MapFragment = new MapFragments();
-				return MapFragment;
+//			case 3: 	
+//				Fragment MapFragment = new MapFragments();
+//				return MapFragment;
 
 			default:
 				//dummy place holders
