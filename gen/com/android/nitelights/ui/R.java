@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.android.nitelights;
+package com.android.nitelights.ui;
 
 public final class R {
     public static final class attr {
@@ -378,16 +378,15 @@ containing a value of this type.
         public static final int item_pressed=0x7f02002e;
         public static final int list_extra_button_background=0x7f02002f;
         public static final int list_extra_button_left_border=0x7f020030;
-        public static final int map_marker=0x7f020031;
-        public static final int one_half_star=0x7f020032;
-        public static final int one_star=0x7f020033;
-        public static final int profile_picture=0x7f020034;
-        public static final int schedule_time_background=0x7f020035;
-        public static final int star_rating=0x7f020036;
-        public static final int three_half_star=0x7f020037;
-        public static final int three_star=0x7f020038;
-        public static final int two_half_star=0x7f020039;
-        public static final int two_star=0x7f02003a;
+        public static final int one_half_star=0x7f020031;
+        public static final int one_star=0x7f020032;
+        public static final int profile_picture=0x7f020033;
+        public static final int schedule_time_background=0x7f020034;
+        public static final int star_rating=0x7f020035;
+        public static final int three_half_star=0x7f020036;
+        public static final int three_star=0x7f020037;
+        public static final int two_half_star=0x7f020038;
+        public static final int two_star=0x7f020039;
     }
     public static final class id {
         public static final int buttonSignOut=0x7f05002c;
@@ -632,20 +631,20 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #MapAttrs_cameraBearing com.android.nitelights:cameraBearing}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraTargetLat com.android.nitelights:cameraTargetLat}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraTargetLng com.android.nitelights:cameraTargetLng}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraTilt com.android.nitelights:cameraTilt}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraZoom com.android.nitelights:cameraZoom}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_mapType com.android.nitelights:mapType}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiCompass com.android.nitelights:uiCompass}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiRotateGestures com.android.nitelights:uiRotateGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiScrollGestures com.android.nitelights:uiScrollGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiTiltGestures com.android.nitelights:uiTiltGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiZoomControls com.android.nitelights:uiZoomControls}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiZoomGestures com.android.nitelights:uiZoomGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_useViewLifecycle com.android.nitelights:useViewLifecycle}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_zOrderOnTop com.android.nitelights:zOrderOnTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraBearing com.android.nitelights.ui:cameraBearing}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTargetLat com.android.nitelights.ui:cameraTargetLat}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTargetLng com.android.nitelights.ui:cameraTargetLng}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTilt com.android.nitelights.ui:cameraTilt}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraZoom com.android.nitelights.ui:cameraZoom}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_mapType com.android.nitelights.ui:mapType}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiCompass com.android.nitelights.ui:uiCompass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiRotateGestures com.android.nitelights.ui:uiRotateGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiScrollGestures com.android.nitelights.ui:uiScrollGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiTiltGestures com.android.nitelights.ui:uiTiltGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiZoomControls com.android.nitelights.ui:uiZoomControls}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiZoomGestures com.android.nitelights.ui:uiZoomGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_useViewLifecycle com.android.nitelights.ui:useViewLifecycle}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_zOrderOnTop com.android.nitelights.ui:zOrderOnTop}</code></td><td></td></tr>
            </table>
            @see #MapAttrs_cameraBearing
            @see #MapAttrs_cameraTargetLat
@@ -669,7 +668,7 @@ containing a value of this type.
             0x7f01000c, 0x7f01000d
         };
         /**
-          <p>This symbol is the offset where the {@link com.android.nitelights.R.attr#cameraBearing}
+          <p>This symbol is the offset where the {@link com.android.nitelights.ui.R.attr#cameraBearing}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -683,7 +682,7 @@ containing a value of this type.
         */
         public static final int MapAttrs_cameraBearing = 1;
         /**
-          <p>This symbol is the offset where the {@link com.android.nitelights.R.attr#cameraTargetLat}
+          <p>This symbol is the offset where the {@link com.android.nitelights.ui.R.attr#cameraTargetLat}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -697,7 +696,7 @@ containing a value of this type.
         */
         public static final int MapAttrs_cameraTargetLat = 2;
         /**
-          <p>This symbol is the offset where the {@link com.android.nitelights.R.attr#cameraTargetLng}
+          <p>This symbol is the offset where the {@link com.android.nitelights.ui.R.attr#cameraTargetLng}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -711,7 +710,7 @@ containing a value of this type.
         */
         public static final int MapAttrs_cameraTargetLng = 3;
         /**
-          <p>This symbol is the offset where the {@link com.android.nitelights.R.attr#cameraTilt}
+          <p>This symbol is the offset where the {@link com.android.nitelights.ui.R.attr#cameraTilt}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -725,7 +724,7 @@ containing a value of this type.
         */
         public static final int MapAttrs_cameraTilt = 4;
         /**
-          <p>This symbol is the offset where the {@link com.android.nitelights.R.attr#cameraZoom}
+          <p>This symbol is the offset where the {@link com.android.nitelights.ui.R.attr#cameraZoom}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -739,7 +738,7 @@ containing a value of this type.
         */
         public static final int MapAttrs_cameraZoom = 5;
         /**
-          <p>This symbol is the offset where the {@link com.android.nitelights.R.attr#mapType}
+          <p>This symbol is the offset where the {@link com.android.nitelights.ui.R.attr#mapType}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -759,7 +758,7 @@ containing a value of this type.
         */
         public static final int MapAttrs_mapType = 0;
         /**
-          <p>This symbol is the offset where the {@link com.android.nitelights.R.attr#uiCompass}
+          <p>This symbol is the offset where the {@link com.android.nitelights.ui.R.attr#uiCompass}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -773,7 +772,7 @@ containing a value of this type.
         */
         public static final int MapAttrs_uiCompass = 6;
         /**
-          <p>This symbol is the offset where the {@link com.android.nitelights.R.attr#uiRotateGestures}
+          <p>This symbol is the offset where the {@link com.android.nitelights.ui.R.attr#uiRotateGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -787,7 +786,7 @@ containing a value of this type.
         */
         public static final int MapAttrs_uiRotateGestures = 7;
         /**
-          <p>This symbol is the offset where the {@link com.android.nitelights.R.attr#uiScrollGestures}
+          <p>This symbol is the offset where the {@link com.android.nitelights.ui.R.attr#uiScrollGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -801,7 +800,7 @@ containing a value of this type.
         */
         public static final int MapAttrs_uiScrollGestures = 8;
         /**
-          <p>This symbol is the offset where the {@link com.android.nitelights.R.attr#uiTiltGestures}
+          <p>This symbol is the offset where the {@link com.android.nitelights.ui.R.attr#uiTiltGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -815,7 +814,7 @@ containing a value of this type.
         */
         public static final int MapAttrs_uiTiltGestures = 9;
         /**
-          <p>This symbol is the offset where the {@link com.android.nitelights.R.attr#uiZoomControls}
+          <p>This symbol is the offset where the {@link com.android.nitelights.ui.R.attr#uiZoomControls}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -829,7 +828,7 @@ containing a value of this type.
         */
         public static final int MapAttrs_uiZoomControls = 10;
         /**
-          <p>This symbol is the offset where the {@link com.android.nitelights.R.attr#uiZoomGestures}
+          <p>This symbol is the offset where the {@link com.android.nitelights.ui.R.attr#uiZoomGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -843,7 +842,7 @@ containing a value of this type.
         */
         public static final int MapAttrs_uiZoomGestures = 11;
         /**
-          <p>This symbol is the offset where the {@link com.android.nitelights.R.attr#useViewLifecycle}
+          <p>This symbol is the offset where the {@link com.android.nitelights.ui.R.attr#useViewLifecycle}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -857,7 +856,7 @@ containing a value of this type.
         */
         public static final int MapAttrs_useViewLifecycle = 12;
         /**
-          <p>This symbol is the offset where the {@link com.android.nitelights.R.attr#zOrderOnTop}
+          <p>This symbol is the offset where the {@link com.android.nitelights.ui.R.attr#zOrderOnTop}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -876,7 +875,7 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #com_facebook_friend_picker_fragment_multi_select com.android.nitelights:multi_select}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_friend_picker_fragment_multi_select com.android.nitelights.ui:multi_select}</code></td><td></td></tr>
            </table>
            @see #com_facebook_friend_picker_fragment_multi_select
          */
@@ -884,7 +883,7 @@ containing a value of this type.
             0x7f010015
         };
         /**
-          <p>This symbol is the offset where the {@link com.android.nitelights.R.attr#multi_select}
+          <p>This symbol is the offset where the {@link com.android.nitelights.ui.R.attr#multi_select}
           attribute's value can be found in the {@link #com_facebook_friend_picker_fragment} array.
 
 
@@ -903,10 +902,10 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #com_facebook_login_view_confirm_logout com.android.nitelights:confirm_logout}</code></td><td></td></tr>
-           <tr><td><code>{@link #com_facebook_login_view_fetch_user_info com.android.nitelights:fetch_user_info}</code></td><td></td></tr>
-           <tr><td><code>{@link #com_facebook_login_view_login_text com.android.nitelights:login_text}</code></td><td></td></tr>
-           <tr><td><code>{@link #com_facebook_login_view_logout_text com.android.nitelights:logout_text}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_login_view_confirm_logout com.android.nitelights.ui:confirm_logout}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_login_view_fetch_user_info com.android.nitelights.ui:fetch_user_info}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_login_view_login_text com.android.nitelights.ui:login_text}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_login_view_logout_text com.android.nitelights.ui:logout_text}</code></td><td></td></tr>
            </table>
            @see #com_facebook_login_view_confirm_logout
            @see #com_facebook_login_view_fetch_user_info
@@ -917,7 +916,7 @@ containing a value of this type.
             0x7f01001a, 0x7f01001b, 0x7f01001c, 0x7f01001d
         };
         /**
-          <p>This symbol is the offset where the {@link com.android.nitelights.R.attr#confirm_logout}
+          <p>This symbol is the offset where the {@link com.android.nitelights.ui.R.attr#confirm_logout}
           attribute's value can be found in the {@link #com_facebook_login_view} array.
 
 
@@ -931,7 +930,7 @@ containing a value of this type.
         */
         public static final int com_facebook_login_view_confirm_logout = 0;
         /**
-          <p>This symbol is the offset where the {@link com.android.nitelights.R.attr#fetch_user_info}
+          <p>This symbol is the offset where the {@link com.android.nitelights.ui.R.attr#fetch_user_info}
           attribute's value can be found in the {@link #com_facebook_login_view} array.
 
 
@@ -945,7 +944,7 @@ containing a value of this type.
         */
         public static final int com_facebook_login_view_fetch_user_info = 1;
         /**
-          <p>This symbol is the offset where the {@link com.android.nitelights.R.attr#login_text}
+          <p>This symbol is the offset where the {@link com.android.nitelights.ui.R.attr#login_text}
           attribute's value can be found in the {@link #com_facebook_login_view} array.
 
 
@@ -959,7 +958,7 @@ containing a value of this type.
         */
         public static final int com_facebook_login_view_login_text = 2;
         /**
-          <p>This symbol is the offset where the {@link com.android.nitelights.R.attr#logout_text}
+          <p>This symbol is the offset where the {@link com.android.nitelights.ui.R.attr#logout_text}
           attribute's value can be found in the {@link #com_facebook_login_view} array.
 
 
@@ -978,13 +977,13 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #com_facebook_picker_fragment_done_button_background com.android.nitelights:done_button_background}</code></td><td></td></tr>
-           <tr><td><code>{@link #com_facebook_picker_fragment_done_button_text com.android.nitelights:done_button_text}</code></td><td></td></tr>
-           <tr><td><code>{@link #com_facebook_picker_fragment_extra_fields com.android.nitelights:extra_fields}</code></td><td></td></tr>
-           <tr><td><code>{@link #com_facebook_picker_fragment_show_pictures com.android.nitelights:show_pictures}</code></td><td></td></tr>
-           <tr><td><code>{@link #com_facebook_picker_fragment_show_title_bar com.android.nitelights:show_title_bar}</code></td><td></td></tr>
-           <tr><td><code>{@link #com_facebook_picker_fragment_title_bar_background com.android.nitelights:title_bar_background}</code></td><td></td></tr>
-           <tr><td><code>{@link #com_facebook_picker_fragment_title_text com.android.nitelights:title_text}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_picker_fragment_done_button_background com.android.nitelights.ui:done_button_background}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_picker_fragment_done_button_text com.android.nitelights.ui:done_button_text}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_picker_fragment_extra_fields com.android.nitelights.ui:extra_fields}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_picker_fragment_show_pictures com.android.nitelights.ui:show_pictures}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_picker_fragment_show_title_bar com.android.nitelights.ui:show_title_bar}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_picker_fragment_title_bar_background com.android.nitelights.ui:title_bar_background}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_picker_fragment_title_text com.android.nitelights.ui:title_text}</code></td><td></td></tr>
            </table>
            @see #com_facebook_picker_fragment_done_button_background
            @see #com_facebook_picker_fragment_done_button_text
@@ -999,7 +998,7 @@ containing a value of this type.
             0x7f010012, 0x7f010013, 0x7f010014
         };
         /**
-          <p>This symbol is the offset where the {@link com.android.nitelights.R.attr#done_button_background}
+          <p>This symbol is the offset where the {@link com.android.nitelights.ui.R.attr#done_button_background}
           attribute's value can be found in the {@link #com_facebook_picker_fragment} array.
 
 
@@ -1009,7 +1008,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int com_facebook_picker_fragment_done_button_background = 6;
         /**
-          <p>This symbol is the offset where the {@link com.android.nitelights.R.attr#done_button_text}
+          <p>This symbol is the offset where the {@link com.android.nitelights.ui.R.attr#done_button_text}
           attribute's value can be found in the {@link #com_facebook_picker_fragment} array.
 
 
@@ -1023,7 +1022,7 @@ containing a value of this type.
         */
         public static final int com_facebook_picker_fragment_done_button_text = 4;
         /**
-          <p>This symbol is the offset where the {@link com.android.nitelights.R.attr#extra_fields}
+          <p>This symbol is the offset where the {@link com.android.nitelights.ui.R.attr#extra_fields}
           attribute's value can be found in the {@link #com_facebook_picker_fragment} array.
 
 
@@ -1037,7 +1036,7 @@ containing a value of this type.
         */
         public static final int com_facebook_picker_fragment_extra_fields = 1;
         /**
-          <p>This symbol is the offset where the {@link com.android.nitelights.R.attr#show_pictures}
+          <p>This symbol is the offset where the {@link com.android.nitelights.ui.R.attr#show_pictures}
           attribute's value can be found in the {@link #com_facebook_picker_fragment} array.
 
 
@@ -1051,7 +1050,7 @@ containing a value of this type.
         */
         public static final int com_facebook_picker_fragment_show_pictures = 0;
         /**
-          <p>This symbol is the offset where the {@link com.android.nitelights.R.attr#show_title_bar}
+          <p>This symbol is the offset where the {@link com.android.nitelights.ui.R.attr#show_title_bar}
           attribute's value can be found in the {@link #com_facebook_picker_fragment} array.
 
 
@@ -1065,7 +1064,7 @@ containing a value of this type.
         */
         public static final int com_facebook_picker_fragment_show_title_bar = 2;
         /**
-          <p>This symbol is the offset where the {@link com.android.nitelights.R.attr#title_bar_background}
+          <p>This symbol is the offset where the {@link com.android.nitelights.ui.R.attr#title_bar_background}
           attribute's value can be found in the {@link #com_facebook_picker_fragment} array.
 
 
@@ -1075,7 +1074,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int com_facebook_picker_fragment_title_bar_background = 5;
         /**
-          <p>This symbol is the offset where the {@link com.android.nitelights.R.attr#title_text}
+          <p>This symbol is the offset where the {@link com.android.nitelights.ui.R.attr#title_text}
           attribute's value can be found in the {@link #com_facebook_picker_fragment} array.
 
 
@@ -1094,10 +1093,10 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #com_facebook_place_picker_fragment_radius_in_meters com.android.nitelights:radius_in_meters}</code></td><td></td></tr>
-           <tr><td><code>{@link #com_facebook_place_picker_fragment_results_limit com.android.nitelights:results_limit}</code></td><td></td></tr>
-           <tr><td><code>{@link #com_facebook_place_picker_fragment_search_text com.android.nitelights:search_text}</code></td><td></td></tr>
-           <tr><td><code>{@link #com_facebook_place_picker_fragment_show_search_box com.android.nitelights:show_search_box}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_place_picker_fragment_radius_in_meters com.android.nitelights.ui:radius_in_meters}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_place_picker_fragment_results_limit com.android.nitelights.ui:results_limit}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_place_picker_fragment_search_text com.android.nitelights.ui:search_text}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_place_picker_fragment_show_search_box com.android.nitelights.ui:show_search_box}</code></td><td></td></tr>
            </table>
            @see #com_facebook_place_picker_fragment_radius_in_meters
            @see #com_facebook_place_picker_fragment_results_limit
@@ -1108,7 +1107,7 @@ containing a value of this type.
             0x7f010016, 0x7f010017, 0x7f010018, 0x7f010019
         };
         /**
-          <p>This symbol is the offset where the {@link com.android.nitelights.R.attr#radius_in_meters}
+          <p>This symbol is the offset where the {@link com.android.nitelights.ui.R.attr#radius_in_meters}
           attribute's value can be found in the {@link #com_facebook_place_picker_fragment} array.
 
 
@@ -1122,7 +1121,7 @@ containing a value of this type.
         */
         public static final int com_facebook_place_picker_fragment_radius_in_meters = 0;
         /**
-          <p>This symbol is the offset where the {@link com.android.nitelights.R.attr#results_limit}
+          <p>This symbol is the offset where the {@link com.android.nitelights.ui.R.attr#results_limit}
           attribute's value can be found in the {@link #com_facebook_place_picker_fragment} array.
 
 
@@ -1136,7 +1135,7 @@ containing a value of this type.
         */
         public static final int com_facebook_place_picker_fragment_results_limit = 1;
         /**
-          <p>This symbol is the offset where the {@link com.android.nitelights.R.attr#search_text}
+          <p>This symbol is the offset where the {@link com.android.nitelights.ui.R.attr#search_text}
           attribute's value can be found in the {@link #com_facebook_place_picker_fragment} array.
 
 
@@ -1150,7 +1149,7 @@ containing a value of this type.
         */
         public static final int com_facebook_place_picker_fragment_search_text = 2;
         /**
-          <p>This symbol is the offset where the {@link com.android.nitelights.R.attr#show_search_box}
+          <p>This symbol is the offset where the {@link com.android.nitelights.ui.R.attr#show_search_box}
           attribute's value can be found in the {@link #com_facebook_place_picker_fragment} array.
 
 
@@ -1169,8 +1168,8 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #com_facebook_profile_picture_view_is_cropped com.android.nitelights:is_cropped}</code></td><td></td></tr>
-           <tr><td><code>{@link #com_facebook_profile_picture_view_preset_size com.android.nitelights:preset_size}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_profile_picture_view_is_cropped com.android.nitelights.ui:is_cropped}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_profile_picture_view_preset_size com.android.nitelights.ui:preset_size}</code></td><td></td></tr>
            </table>
            @see #com_facebook_profile_picture_view_is_cropped
            @see #com_facebook_profile_picture_view_preset_size
@@ -1179,7 +1178,7 @@ containing a value of this type.
             0x7f01001e, 0x7f01001f
         };
         /**
-          <p>This symbol is the offset where the {@link com.android.nitelights.R.attr#is_cropped}
+          <p>This symbol is the offset where the {@link com.android.nitelights.ui.R.attr#is_cropped}
           attribute's value can be found in the {@link #com_facebook_profile_picture_view} array.
 
 
@@ -1193,7 +1192,7 @@ containing a value of this type.
         */
         public static final int com_facebook_profile_picture_view_is_cropped = 1;
         /**
-          <p>This symbol is the offset where the {@link com.android.nitelights.R.attr#preset_size}
+          <p>This symbol is the offset where the {@link com.android.nitelights.ui.R.attr#preset_size}
           attribute's value can be found in the {@link #com_facebook_profile_picture_view} array.
 
 

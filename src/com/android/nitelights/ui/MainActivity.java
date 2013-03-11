@@ -18,6 +18,13 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.android.nitelights.R;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 /**
  * 
@@ -28,23 +35,22 @@ import com.android.nitelights.R;
 public class MainActivity extends FragmentActivity implements ActionBar.TabListener {
 
 	AppSectionsPagerAdapter mAppSectionsPagerAdapter;
-	
 
-	
+
+
 	/**
 	 * ViewPager(Layout manager that allows the user to flip left and right through pages of data)
 	 */		 
 	ViewPager mViewPager;
 
 
+	
 	@SuppressLint("NewApi") @Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
 
-		
-		
+	
 		
 		//Create the adapter that will return a Fragment(A Fragment is a piece of an application's
 		//user interface or behavior that can be placed in an Activity) 
@@ -74,18 +80,17 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 		});
 
 		actionBar.addTab(actionBar.newTab()
-                .setText(R.string.title_the_wire)
-                .setTabListener(this));
-        actionBar.addTab(actionBar.newTab()
-                .setText(R.string.title_venues)
-                .setTabListener(this));
-        actionBar.addTab(actionBar.newTab()
-                .setText(R.string.title_profile)
-                .setTabListener(this));
-        actionBar.addTab(actionBar.newTab()
-                .setText(R.string.title_map)
-                .setTabListener(this));
-   
+				.setText(R.string.title_the_wire)
+				.setTabListener(this));
+		actionBar.addTab(actionBar.newTab()
+				.setText(R.string.title_venues)
+				.setTabListener(this));
+		actionBar.addTab(actionBar.newTab()
+				.setText(R.string.title_profile)
+				.setTabListener(this));
+		actionBar.addTab(actionBar.newTab()
+				.setText(R.string.title_map)
+				.setTabListener(this));
 	}
 
 
@@ -123,8 +128,8 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 
 			switch(i) {
 
-//			case 0:
-//				//This is the Wire
+			//			case 0:
+			//				//This is the Wire
 
 			case 1:
 				Fragment venueFragment = new VenuesFragment();
@@ -132,10 +137,11 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 			case 2:
 				Fragment profileFragment = new ProfileFragment();
 				return profileFragment;
-				
-//			case 3: 	
-//				//This is the Map page
-				
+
+			case 3: 	
+				Fragment MapFragment = new MapFragments();
+				return MapFragment;
+
 			default:
 				//dummy place holders
 				Fragment fragment = new DummySectionFragment();
@@ -156,26 +162,26 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 			return NUM_SECTIONS;
 		}
 
-}
-	
-	
+	}
 
-	
-	
+
+
+
+
 	/**
 	 * a fragment that launches other parts of the demo application
 	 */
 	public static class LaunchpadSectionFragment extends Fragment{
-		
+
 		public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstancestate){
 			//Instantiates a layout XML file into its corresponding View objects. 
 			//inflate a new view hierarchy from the specified XML node
 			View rootView = inflater.inflate(R.layout.fragment_section_launchpad, container, false);
-			
+
 			//demonstration of a collection-browsing activity.
 			rootView.findViewById(R.id.demo_collection_button).setOnClickListener(new View.OnClickListener(){
 				public void onClick(View view){
-					
+
 					/*What are intents?
 					 * An intent can be thought of as the glue between activities.
 					 * It is basically a passive data stucture holding an abstract description of an action 
@@ -235,16 +241,16 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 					 * 		String value2 = extras.getString("Value2");
 					 * 
 					 * 
-					*/
-					
+					 */
+
 					Intent intent = new Intent(getActivity(),CollectionDemoActivity.class);
 					startActivity(intent);
 				}
 			});
-			
+
 			//demonstration of navigating to external activities.
 			rootView.findViewById(R.id.demo_external_activity).setOnClickListener(new View.OnClickListener() {
-				
+
 				@Override
 				public void onClick(View v) {
 					Intent externalActivityIntent = new Intent(Intent.ACTION_PICK);
@@ -256,14 +262,14 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 			return rootView;
 		}
 	}
-	
+
 	/**
 	 * A dummy fragment representing a section of the app, but that simply displays dummy text
 	 */
 	public static class DummySectionFragment extends Fragment{
-		
+
 		public static final String ARG_SECTION_NUMBER = "section_number";
-		
+
 		public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
 			//Instantiates an XML file into the corresponding View object
 			//Inflate a new view hierarchy from the spedified XML node
@@ -275,7 +281,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 			return rootView;
 		}
 	}
-	
+
 
 
 }

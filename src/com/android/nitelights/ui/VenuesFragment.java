@@ -63,6 +63,7 @@ public class VenuesFragment extends ListFragment{
 	@Override
 	public void onListItemClick(ListView l, View v, int position, long id)
 	{
+		
 		LinearLayout parent = (LinearLayout) v;
 		ImageView icon = (ImageView) parent.findViewById(R.id.listitem_icon);
 		
@@ -79,4 +80,5 @@ public class VenuesFragment extends ListFragment{
 			Toast.makeText(getActivity(), result, Toast.LENGTH_SHORT).show();
 		}
 	}
+	
 }
