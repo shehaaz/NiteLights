@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 
 import com.android.nitelights.R;
-import com.android.nitelights.ui.VenuesFactory;
+import com.android.nitelights.venues.VenuesFactory;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;

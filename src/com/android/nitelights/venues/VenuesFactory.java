@@ -1,4 +1,4 @@
-package com.android.nitelights.ui;
+package com.android.nitelights.venues;
 
 import java.io.Serializable;
 

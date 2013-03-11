@@ -1,4 +1,4 @@
-package com.android.nitelights.ui;
+package com.android.nitelights.venues;
 
 import android.app.Activity;
 import android.content.Context;

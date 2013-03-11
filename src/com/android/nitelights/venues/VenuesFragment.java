@@ -1,4 +1,4 @@
-package com.android.nitelights.ui;
+package com.android.nitelights.venues;
 
 import java.util.ArrayList;
 import java.util.HashMap;
