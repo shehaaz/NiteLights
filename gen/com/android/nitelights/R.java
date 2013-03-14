@@ -381,13 +381,15 @@ containing a value of this type.
         public static final int map_marker=0x7f020031;
         public static final int one_half_star=0x7f020032;
         public static final int one_star=0x7f020033;
-        public static final int profile_picture=0x7f020034;
-        public static final int schedule_time_background=0x7f020035;
-        public static final int star_rating=0x7f020036;
-        public static final int three_half_star=0x7f020037;
-        public static final int three_star=0x7f020038;
-        public static final int two_half_star=0x7f020039;
-        public static final int two_star=0x7f02003a;
+        public static final int open_map=0x7f020034;
+        public static final int open_map_trans=0x7f020035;
+        public static final int profile_picture=0x7f020036;
+        public static final int schedule_time_background=0x7f020037;
+        public static final int star_rating=0x7f020038;
+        public static final int three_half_star=0x7f020039;
+        public static final int three_star=0x7f02003a;
+        public static final int two_half_star=0x7f02003b;
+        public static final int two_star=0x7f02003c;
     }
     public static final class id {
         public static final int buttonSignOut=0x7f05002d;
@@ -450,37 +452,40 @@ containing a value of this type.
         public static final int activity_collection_demo=0x7f030000;
         public static final int activity_main=0x7f030001;
         public static final int activity_map=0x7f030002;
-        public static final int activity_singlepane_empty=0x7f030003;
-        public static final int com_facebook_friendpickerfragment=0x7f030004;
-        public static final int com_facebook_login_activity_layout=0x7f030005;
-        public static final int com_facebook_picker_activity_circle_row=0x7f030006;
-        public static final int com_facebook_picker_checkbox=0x7f030007;
-        public static final int com_facebook_picker_image=0x7f030008;
-        public static final int com_facebook_picker_list_row=0x7f030009;
-        public static final int com_facebook_picker_list_section_header=0x7f03000a;
-        public static final int com_facebook_picker_search_box=0x7f03000b;
-        public static final int com_facebook_picker_title_bar=0x7f03000c;
-        public static final int com_facebook_picker_title_bar_stub=0x7f03000d;
-        public static final int com_facebook_placepickerfragment=0x7f03000e;
-        public static final int com_facebook_placepickerfragment_list_row=0x7f03000f;
-        public static final int com_facebook_usersettingsfragment=0x7f030010;
-        public static final int empty_waiting_for_sync=0x7f030011;
-        public static final int fragment_collection_object=0x7f030012;
-        public static final int fragment_list_with_empty_container=0x7f030013;
-        public static final int fragment_section_dummy=0x7f030014;
-        public static final int fragment_section_launchpad=0x7f030015;
-        public static final int list_item_the_wire_header=0x7f030016;
-        public static final int list_item_venues=0x7f030017;
-        public static final int list_venues=0x7f030018;
-        public static final int main=0x7f030019;
-        public static final int map=0x7f03001a;
-        public static final int profile=0x7f03001b;
-        public static final int venues=0x7f03001c;
+        public static final int activity_map_full=0x7f030003;
+        public static final int activity_singlepane_empty=0x7f030004;
+        public static final int com_facebook_friendpickerfragment=0x7f030005;
+        public static final int com_facebook_login_activity_layout=0x7f030006;
+        public static final int com_facebook_picker_activity_circle_row=0x7f030007;
+        public static final int com_facebook_picker_checkbox=0x7f030008;
+        public static final int com_facebook_picker_image=0x7f030009;
+        public static final int com_facebook_picker_list_row=0x7f03000a;
+        public static final int com_facebook_picker_list_section_header=0x7f03000b;
+        public static final int com_facebook_picker_search_box=0x7f03000c;
+        public static final int com_facebook_picker_title_bar=0x7f03000d;
+        public static final int com_facebook_picker_title_bar_stub=0x7f03000e;
+        public static final int com_facebook_placepickerfragment=0x7f03000f;
+        public static final int com_facebook_placepickerfragment_list_row=0x7f030010;
+        public static final int com_facebook_usersettingsfragment=0x7f030011;
+        public static final int empty_waiting_for_sync=0x7f030012;
+        public static final int fragment_collection_object=0x7f030013;
+        public static final int fragment_list_with_empty_container=0x7f030014;
+        public static final int fragment_section_dummy=0x7f030015;
+        public static final int fragment_section_launchpad=0x7f030016;
+        public static final int fragment_wire_mapbutton=0x7f030017;
+        public static final int list_item_the_wire_header=0x7f030018;
+        public static final int list_item_venues=0x7f030019;
+        public static final int list_venues=0x7f03001a;
+        public static final int main=0x7f03001b;
+        public static final int map=0x7f03001c;
+        public static final int profile=0x7f03001d;
+        public static final int venues=0x7f03001e;
     }
     public static final class menu {
         public static final int activity_collection_demo=0x7f0a0000;
         public static final int activity_main=0x7f0a0001;
         public static final int activity_map=0x7f0a0002;
+        public static final int activity_map_full=0x7f0a0003;
     }
     public static final class raw {
         public static final int venues=0x7f040000;
@@ -584,6 +589,7 @@ containing a value of this type.
         public static final int hello_world=0x7f060030;
         public static final int logout=0x7f060039;
         public static final int menu_settings=0x7f060031;
+        public static final int open_map=0x7f060043;
         public static final int profile_first_name=0x7f060036;
         public static final int profile_last_name=0x7f060037;
         public static final int profile_picture=0x7f060038;

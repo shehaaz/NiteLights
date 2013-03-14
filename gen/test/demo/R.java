@@ -19,7 +19,7 @@ public final class R {
 		public static final int SERVER = 0x7f06002e;
 	}
 	public static final class layout {
-		public static final int main = 0x7f030019;
+		public static final int main = 0x7f03001b;
 	}
 	public static final class drawable {
 		public static final int icon = 0x7f02002a;

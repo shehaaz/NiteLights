@@ -21,5 +21,6 @@
     <string name="title_venue_rating">7.5/10</string>
     <string name="title_venue_num_commits">99 Attending</string>
     <string name="title_activity_map">Map</string>
+    <string name="open_map">Open Map</string>
 
 </resources>

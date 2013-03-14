@@ -44,6 +44,7 @@
         android:layout_height="wrap_content"
         android:maxHeight="32dp"
         android:maxWidth="32dp"
+        android:clickable="true"
         android:src="@drawable/discoball" />
 
 </TableLayout>

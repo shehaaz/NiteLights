@@ -52,6 +52,10 @@
             android:value="AIzaSyDaK_Zq7au1OoKuZ6DJnKVYWeBXliUgqDQ" />
 
         <activity
+            android:name="com.android.nitelights.maps.MapVenueActivity"
+            android:label="@string/title_activity_map" >
+        </activity>
+        <activity
             android:name="com.android.nitelights.maps.MapActivity"
             android:label="@string/title_activity_map" >
         </activity>

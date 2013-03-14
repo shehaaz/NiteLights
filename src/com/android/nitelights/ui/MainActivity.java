@@ -19,13 +19,6 @@ import android.widget.TextView;
 
 import com.android.nitelights.R;
 import com.android.nitelights.venues.VenuesFragment;
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
-import com.google.android.gms.maps.model.MarkerOptions;
 
 /**
  * 
@@ -118,7 +111,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	 */
 	public static class AppSectionsPagerAdapter extends FragmentPagerAdapter {
 
-		private static final int NUM_SECTIONS = 4;
+		private static final int NUM_SECTIONS = 3;
 
 		public AppSectionsPagerAdapter(FragmentManager fm) {
 			super(fm);
@@ -129,8 +122,9 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 
 			switch(i) {
 
-			//			case 0:
-			//				//This is the Wire
+			case 0:
+				Fragment wireFragment = new WireFragment();
+				return wireFragment;
 
 			case 1:
 				Fragment venueFragment = new VenuesFragment();

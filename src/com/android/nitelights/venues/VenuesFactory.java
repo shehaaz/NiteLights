@@ -2,11 +2,6 @@ package com.android.nitelights.venues;
 
 import java.io.Serializable;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-
-import com.google.android.gms.maps.model.LatLng;
-
 /**
  * Creates new Venue objects
  */

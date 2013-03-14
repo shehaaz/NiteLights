@@ -1,14 +1,10 @@
 package com.android.nitelights.venues;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -17,8 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.nitelights.R;
-import com.android.nitelights.maps.MapActivity;
-import com.google.android.gms.maps.model.LatLng;
+import com.android.nitelights.maps.MapVenueActivity;
 
 
 
@@ -69,7 +64,7 @@ public class VenuesFragment extends ListFragment{
 	public void onListItemClick(ListView l, View v, int position, long id)
 	{
 		
-		Intent i = new Intent(getActivity(), MapActivity.class);
+		Intent i = new Intent(getActivity(), MapVenueActivity.class);
 		LinearLayout parent = (LinearLayout) v;
 		
 		t = (TextView) parent.findViewById(R.id.title_venue);
@@ -83,7 +78,7 @@ public class VenuesFragment extends ListFragment{
 			}
 		}
 		
-		boolean isDiscoball = icon.getDrawable().getConstantState().equals(getResources().getDrawable(R.drawable.discoball).getConstantState());
+		isDiscoball = icon.getDrawable().getConstantState().equals(getResources().getDrawable(R.drawable.discoball).getConstantState());
 		TextView t = (TextView) parent.findViewById(R.id.title_venue);
 		if(isDiscoball){
 			icon.setImageResource(R.drawable.discoball_trans);
@@ -97,11 +92,6 @@ public class VenuesFragment extends ListFragment{
 			Toast.makeText(getActivity(), result, Toast.LENGTH_SHORT).show();
 		}
 		
-		
-		
-		
-
-
 	}
 	
 }
