@@ -5,9 +5,16 @@
     android:layout_height="fill_parent"
     android:background="#ffffff" >
 
-
-
     <TableRow>
+
+        <ImageView
+            android:id="@+id/listitem_wire_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:maxHeight="32dp"
+            android:maxWidth="32dp"
+            android:src="@drawable/tokyo_logo" />
 
         <TextView
             android:id="@+id/person_wire_name"
@@ -15,7 +22,8 @@
             android:layout_height="wrap_content"
             android:paddingBottom="4dip"
             android:paddingTop="8dip"
-            android:text="@string/title_venue"
+            android:text="@string/person_name"
+            android:paddingLeft="8dip"
             android:textSize="20sp"
             android:textStyle="bold" />
         
@@ -27,15 +35,15 @@
             android:text="@string/committed_to"
             android:textSize="12sp" />
 
-        <TextView
-            android:id="@+id/venue_wire_title"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="6dip"
-            android:paddingLeft="8dip"
-            android:text="@string/title_venue_address"
-            android:textSize="15sp" />
-
     </TableRow>
+
+    <TextView
+        android:id="@+id/venue_wire_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="6dip"
+        android:paddingLeft="8dip"
+        android:text="@string/title_venue"
+        android:textSize="15sp" />
     
 </TableLayout>

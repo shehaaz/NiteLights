@@ -19,6 +19,10 @@ public class WireFragment extends ListFragment{
 		new WireFactory(ProfileFragment.profile_data[1],VenuesFragment.venue_data[2]),
 		new WireFactory(ProfileFragment.profile_data[3],VenuesFragment.venue_data[1]),
 		new WireFactory(ProfileFragment.profile_data[5],VenuesFragment.venue_data[4]),
+		new WireFactory(ProfileFragment.profile_data[6],VenuesFragment.venue_data[9]),
+		new WireFactory(ProfileFragment.profile_data[7],VenuesFragment.venue_data[8]),
+		new WireFactory(ProfileFragment.profile_data[8],VenuesFragment.venue_data[7]),
+		new WireFactory(ProfileFragment.profile_data[9],VenuesFragment.venue_data[6])
 	};
 	
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){

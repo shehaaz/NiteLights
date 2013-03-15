@@ -44,6 +44,7 @@ public class VenuesAdapter extends ArrayAdapter<VenuesFactory>{
 			holder.venueTitle = (TextView) row.findViewById(R.id.title_venue);
 			holder.venueAddress = (TextView) row.findViewById(R.id.title_venue_address);
 			holder.venueRating = (ImageView) row.findViewById(R.id.star_icon);
+			holder.venueIcon = (ImageView) row.findViewById(R.id.listitem_venue_icon);
 
 			
 			row.setTag(holder);
@@ -56,6 +57,7 @@ public class VenuesAdapter extends ArrayAdapter<VenuesFactory>{
 		holder.venueTitle.setText(venue.getTitle());
 		holder.venueAddress.setText(venue.getAddress());
 		holder.venueRating.setImageResource(venue.getRating());
+		holder.venueIcon.setImageResource(venue.getLogo());
 			
 		return row;
 	}
@@ -64,5 +66,6 @@ public class VenuesAdapter extends ArrayAdapter<VenuesFactory>{
 		TextView venueTitle;
 		TextView venueAddress;
 		ImageView venueRating;
+		ImageView venueIcon;
 	}
 }

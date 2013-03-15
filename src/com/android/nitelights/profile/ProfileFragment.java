@@ -20,7 +20,11 @@ public class ProfileFragment extends Fragment{
 		new ProfileFactory("Adam", "Jones"),
 		new ProfileFactory("John","Smith"),
 		new ProfileFactory("Henry", "Fuz"),
-		new ProfileFactory("Josh", "Liben")
+		new ProfileFactory("Josh", "Liben"),
+		new ProfileFactory("Michael", "Jordan"),
+		new ProfileFactory("Bruce", "Lee"),
+		new ProfileFactory("Francis", "Underwood"),
+		new ProfileFactory("Claire ", "Underwood")
 	};
 	
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
