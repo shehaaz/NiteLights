@@ -50,7 +50,7 @@ public class MapFragments extends Fragment {
 
 	private void initLayout(){
 		FragmentManager myFragmentManager = getActivity().getSupportFragmentManager();
-		SupportMapFragment mySupportMapFragment = (SupportMapFragment) myFragmentManager.findFragmentById(R.id.map);
+		SupportMapFragment mySupportMapFragment = (SupportMapFragment) myFragmentManager.findFragmentById(R.id.mapFragment);
 
 		map = mySupportMapFragment.getMap();
 		map.setMyLocationEnabled(true);
@@ -133,7 +133,7 @@ public class MapFragments extends Fragment {
 		super.onResume();
 	
 		int resultCode = GooglePlayServicesUtil.isGooglePlayServicesAvailable(getActivity().getApplicationContext());
-
+		
 		if (resultCode == ConnectionResult.SUCCESS){
 			Toast.makeText(getActivity().getApplicationContext(), 
 					"isGooglePlayServicesAvailable SUCCESS", 

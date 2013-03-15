@@ -13,6 +13,9 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -21,6 +24,7 @@ import com.android.nitelights.R;
 import com.android.nitelights.profile.ProfileFragment;
 import com.android.nitelights.venues.VenuesFragment;
 import com.android.nitelights.wire.WireFragment;
+import com.android.nitelights.maps.MapActivity;
 
 /**
  * 
@@ -82,11 +86,11 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 				.setText(R.string.title_venues)
 				.setTabListener(this));
 		actionBar.addTab(actionBar.newTab()
+				.setText(R.string.title_map)
+				.setTabListener(this));
+		actionBar.addTab(actionBar.newTab()
 				.setText(R.string.title_profile)
 				.setTabListener(this));
-//		actionBar.addTab(actionBar.newTab()
-//				.setText(R.string.title_map)
-//				.setTabListener(this));
 	}
 
 
@@ -113,7 +117,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	 */
 	public static class AppSectionsPagerAdapter extends FragmentPagerAdapter {
 
-		private static final int NUM_SECTIONS = 3;
+		private static final int NUM_SECTIONS = 4;
 
 		public AppSectionsPagerAdapter(FragmentManager fm) {
 			super(fm);
@@ -132,12 +136,11 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 				Fragment venueFragment = new VenuesFragment();
 				return venueFragment;
 			case 2:
+				Fragment mapButtonFragment = new MapButtonFragment();
+				return mapButtonFragment;
+			case 3: 	
 				Fragment profileFragment = new ProfileFragment();
 				return profileFragment;
-
-//			case 3: 	
-//				Fragment MapFragment = new MapFragments();
-//				return MapFragment;
 
 			default:
 				//dummy place holders
@@ -161,9 +164,26 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 
 	}
 
-
-
-
+//	@Override
+//	public boolean onCreateOptionsMenu(Menu menu) {
+//	    MenuInflater inflater = getMenuInflater();
+//	    inflater.inflate(R.menu.activity_main, menu);
+//	    return true;
+//	}
+//
+//	@Override
+//	public boolean onOptionsItemSelected(MenuItem item) {
+//	    switch (item.getItemId()) {
+//	        case R.id.open_actionbar_map:
+//	            // app icon in action bar clicked; go home
+//	            Intent intent = new Intent(this, MapActivity.class);
+//	            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//	            startActivity(intent);
+//	            return true;
+//	        default:
+//	            return super.onOptionsItemSelected(item);
+//	    }
+//	}
 
 	/**
 	 * a fragment that launches other parts of the demo application

@@ -421,8 +421,8 @@ containing a value of this type.
         public static final int com_facebook_usersettingsfragment_login_button=0x7f05001f;
         public static final int com_facebook_usersettingsfragment_logo_image=0x7f05001d;
         public static final int com_facebook_usersettingsfragment_profile_name=0x7f05001e;
-        public static final int demo_collection_button=0x7f050020;
-        public static final int demo_external_activity=0x7f050021;
+        public static final int demo_collection_button=0x7f050021;
+        public static final int demo_external_activity=0x7f050022;
         public static final int hybrid=0x7f050004;
         public static final int large=0x7f050006;
         public static final int list_item_schedule_header_textview=0x7f050023;
@@ -435,7 +435,7 @@ containing a value of this type.
         public static final int menu_settings=0x7f05003b;
         public static final int none=0x7f050000;
         public static final int normal=0x7f050001;
-        public static final int open_map_button=0x7f050022;
+        public static final int open_map_button=0x7f050020;
         public static final int pager=0x7f050007;
         public static final int pager_title_strip=0x7f050008;
         public static final int person_wire_name=0x7f05002b;
@@ -484,18 +484,19 @@ containing a value of this type.
         public static final int empty_waiting_for_sync=0x7f030012;
         public static final int fragment_collection_object=0x7f030013;
         public static final int fragment_list_with_empty_container=0x7f030014;
-        public static final int fragment_section_dummy=0x7f030015;
-        public static final int fragment_section_launchpad=0x7f030016;
-        public static final int fragment_wire_mapbutton=0x7f030017;
-        public static final int list_item_the_wire_header=0x7f030018;
-        public static final int list_item_venues=0x7f030019;
-        public static final int list_item_wire=0x7f03001a;
-        public static final int list_venues=0x7f03001b;
-        public static final int list_wire=0x7f03001c;
-        public static final int main=0x7f03001d;
-        public static final int map=0x7f03001e;
-        public static final int profile=0x7f03001f;
-        public static final int venues=0x7f030020;
+        public static final int fragment_map_button=0x7f030015;
+        public static final int fragment_section_dummy=0x7f030016;
+        public static final int fragment_section_launchpad=0x7f030017;
+        public static final int fragment_wire_mapbutton=0x7f030018;
+        public static final int list_item_the_wire_header=0x7f030019;
+        public static final int list_item_venues=0x7f03001a;
+        public static final int list_item_wire=0x7f03001b;
+        public static final int list_venues=0x7f03001c;
+        public static final int list_wire=0x7f03001d;
+        public static final int main=0x7f03001e;
+        public static final int map=0x7f03001f;
+        public static final int profile=0x7f030020;
+        public static final int venues=0x7f030021;
     }
     public static final class menu {
         public static final int activity_collection_demo=0x7f0a0000;
