@@ -28,7 +28,7 @@ public class VenuesFragment extends ListFragment{
 	private boolean isDiscoball;
 	private TextView t;
 
-	VenuesFactory venue_data[] = new VenuesFactory[]{
+	public static VenuesFactory venue_data[] = new VenuesFactory[]{
 			new VenuesFactory("Light Ultra Club","2020 Crescent Street, Montreal, QC, Canada", R.drawable.one_star,45.498231,-73.577613),
 			new VenuesFactory("Stereo Night Club","858 Sainte-Catherine St E, Montreal, QC, Canada", R.drawable.two_star, 45.516058,-73.558202),
 			new VenuesFactory("Club La Boom Montreal","1254 Rue Stanley, Montreal, QC, Canada", R.drawable.three_half_star, 45.498988,-73.57308),
@@ -44,7 +44,7 @@ public class VenuesFragment extends ListFragment{
 
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
 		View rootView = inflater.inflate(R.layout.list_venues,container, false);
-
+		
 		return rootView;
 	}
 	

@@ -18,7 +18,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.android.nitelights.R;
+import com.android.nitelights.profile.ProfileFragment;
 import com.android.nitelights.venues.VenuesFragment;
+import com.android.nitelights.wire.WireFragment;
 
 /**
  * 

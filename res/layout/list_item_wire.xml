@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tableLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff" >
+
+
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/person_wire_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dip"
+            android:paddingTop="8dip"
+            android:text="@string/title_venue"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="6dip"
+            android:paddingLeft="8dip"
+            android:text="@string/committed_to"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/venue_wire_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="6dip"
+            android:paddingLeft="8dip"
+            android:text="@string/title_venue_address"
+            android:textSize="15sp" />
+
+    </TableRow>
+    
+</TableLayout>

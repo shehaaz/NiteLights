@@ -392,7 +392,7 @@ containing a value of this type.
         public static final int two_star=0x7f02003c;
     }
     public static final class id {
-        public static final int buttonSignOut=0x7f05002d;
+        public static final int buttonSignOut=0x7f050030;
         public static final int com_facebook_login_activity_progress_bar=0x7f05000d;
         public static final int com_facebook_picker_activity_circle=0x7f05000c;
         public static final int com_facebook_picker_checkbox=0x7f05000f;
@@ -416,37 +416,40 @@ containing a value of this type.
         public static final int demo_external_activity=0x7f050021;
         public static final int hybrid=0x7f050004;
         public static final int large=0x7f050006;
-        public static final int list_item_schedule_header_textview=0x7f050022;
-        public static final int listitem_icon=0x7f050027;
-        public static final int logo=0x7f05002a;
+        public static final int list_item_schedule_header_textview=0x7f050023;
+        public static final int listitem_icon=0x7f050028;
+        public static final int logo=0x7f05002d;
         public static final int map=0x7f050009;
-        public static final int mapFragment=0x7f050029;
-        public static final int menu_settings=0x7f050036;
+        public static final int mapFragment=0x7f05002c;
+        public static final int menu_settings=0x7f050039;
         public static final int none=0x7f050000;
         public static final int normal=0x7f050001;
+        public static final int open_map_button=0x7f050022;
         public static final int pager=0x7f050007;
         public static final int pager_title_strip=0x7f050008;
+        public static final int person_wire_name=0x7f050029;
         public static final int picker_subtitle=0x7f05001c;
-        public static final int profileFirstName=0x7f05002b;
-        public static final int profileLastName=0x7f05002c;
+        public static final int profileFirstName=0x7f05002e;
+        public static final int profileLastName=0x7f05002f;
         public static final int root_container=0x7f05000a;
         public static final int satellite=0x7f050002;
         public static final int search_box=0x7f05001b;
         public static final int small=0x7f050005;
-        public static final int star_icon=0x7f050026;
-        public static final int tableLayout1=0x7f050023;
+        public static final int star_icon=0x7f050027;
+        public static final int tableLayout1=0x7f050024;
         public static final int terrain=0x7f050003;
-        public static final int text=0x7f050028;
-        public static final int title_venue=0x7f050024;
-        public static final int title_venue_address=0x7f050025;
-        public static final int widget39=0x7f050035;
-        public static final int widget40=0x7f050032;
-        public static final int widget42=0x7f050031;
-        public static final int widget43=0x7f050033;
-        public static final int widget44=0x7f050030;
-        public static final int widget46=0x7f05002f;
-        public static final int widget47=0x7f050034;
-        public static final int widget48=0x7f05002e;
+        public static final int text=0x7f05002b;
+        public static final int title_venue=0x7f050025;
+        public static final int title_venue_address=0x7f050026;
+        public static final int venue_wire_title=0x7f05002a;
+        public static final int widget39=0x7f050038;
+        public static final int widget40=0x7f050035;
+        public static final int widget42=0x7f050034;
+        public static final int widget43=0x7f050036;
+        public static final int widget44=0x7f050033;
+        public static final int widget46=0x7f050032;
+        public static final int widget47=0x7f050037;
+        public static final int widget48=0x7f050031;
     }
     public static final class layout {
         public static final int activity_collection_demo=0x7f030000;
@@ -475,11 +478,13 @@ containing a value of this type.
         public static final int fragment_wire_mapbutton=0x7f030017;
         public static final int list_item_the_wire_header=0x7f030018;
         public static final int list_item_venues=0x7f030019;
-        public static final int list_venues=0x7f03001a;
-        public static final int main=0x7f03001b;
-        public static final int map=0x7f03001c;
-        public static final int profile=0x7f03001d;
-        public static final int venues=0x7f03001e;
+        public static final int list_item_wire=0x7f03001a;
+        public static final int list_venues=0x7f03001b;
+        public static final int list_wire=0x7f03001c;
+        public static final int main=0x7f03001d;
+        public static final int map=0x7f03001e;
+        public static final int profile=0x7f03001f;
+        public static final int venues=0x7f030020;
     }
     public static final class menu {
         public static final int activity_collection_demo=0x7f0a0000;
@@ -529,6 +534,7 @@ containing a value of this type.
         public static final int com_facebook_usersettingsfragment_log_in_button=0x7f060019;
         public static final int com_facebook_usersettingsfragment_logged_in=0x7f06001a;
         public static final int com_facebook_usersettingsfragment_not_logged_in=0x7f06001b;
+        public static final int committed_to=0x7f060044;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=40] 

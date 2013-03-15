@@ -14,4 +14,3 @@
         android:cacheColorHint="@android:color/white"
         android:drawSelectorOnTop="false" />
 </FrameLayout>
-
