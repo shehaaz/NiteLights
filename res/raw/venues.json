@@ -403,6 +403,7 @@
             "opening_hours": {
                 "open_now": false
             },
+            "rating": 0.0,
             "reference": "CnRqAAAAWFs-eSA2loCogWYDv4tpExnzkbRNxtvx_O6nQ-xeRRby9vf60mDonXQoA-3PPr_nTgFiD3rGLjKGQJjMmrKdmBZTMWB2eRaUHFSkktWf0M1sqpBJgy4wIvQz3LxvdOCtj02Vco3sTFqC1LubLQ-aEhIQQA-yQuNeilz8fB4uJnKyDRoU0wXnagS9_FLdv2bX70oZA24vv44",
             "types": [
                 "cafe",
@@ -429,6 +430,7 @@
                     "width": 604
                 }
             ],
+            "rating": 0.0,
             "reference": "CnRsAAAAsMkBvwfeKcAtui8d3C88cdq6VwemwThK9rpTbPYC91ZWdewk3c9kKqTvmh5yeXSzog8oUWaw7JXVcd8exswtTST4Apr-6MmJBOuAguOJclQX6cz4eEcf-6zLR1BSJzuB534osnT1fpzP-v5zdtCNvxIQ0zwVfWa6iMu8lU9CEurKyxoUSF7oN71NXJdukMvVZDB_n5PP9Ko",
             "types": [
                 "night_club",

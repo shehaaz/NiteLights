@@ -1,17 +1,27 @@
 package com.android.nitelights.ui;
 
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -22,6 +32,8 @@ import android.widget.TextView;
 
 import com.android.nitelights.R;
 import com.android.nitelights.profile.ProfileFragment;
+import com.android.nitelights.venues.VenuesAdapter;
+import com.android.nitelights.venues.VenuesFactory;
 import com.android.nitelights.venues.VenuesFragment;
 import com.android.nitelights.wire.WireFragment;
 import com.android.nitelights.maps.MapActivity;
@@ -36,22 +48,40 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 
 	AppSectionsPagerAdapter mAppSectionsPagerAdapter;
 
+	public static VenuesFactory venue_data[];
+
+	final static int VenueJson = R.raw.venues;
+	private String jsonString;
+	private String title = "";
+	private String address = "";
+	private Double lat;
+	private Double lng;
+	private Double rating;
+	private JSONObject geometry;
+	private JSONObject location;
 
 
 	/**
 	 * ViewPager(Layout manager that allows the user to flip left and right through pages of data)
 	 */		 
 	ViewPager mViewPager;
-
-
 	
+
+
+
 	@SuppressLint("NewApi") @Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
-	
 		
+		jsonString = getStringFromResource(VenueJson);
+
+		try {
+			venue_data = createVenues(jsonString);
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+
 		//Create the adapter that will return a Fragment(A Fragment is a piece of an application's
 		//user interface or behavior that can be placed in an Activity) 
 		//for each of the three primary sections of the app
@@ -129,11 +159,11 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 			switch(i) {
 
 			case 0:
-				Fragment wireFragment = new WireFragment();
+				Fragment wireFragment = new WireFragment(venue_data);
 				return wireFragment;
 
 			case 1:
-				Fragment venueFragment = new VenuesFragment();
+				Fragment venueFragment = new VenuesFragment(venue_data);
 				return venueFragment;
 			case 2:
 				Fragment mapButtonFragment = new MapButtonFragment();
@@ -143,17 +173,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 				return profileFragment;
 
 			default:
-				//dummy place holders
-				Fragment fragment = new DummySectionFragment();
-				//Bundle: A mapping from String values to various Parcelable types
-				Bundle args = new Bundle();
-				//Inserts an int value into the mapping of htis Bundle, replacing any existing value for 
-				//the given key
-				args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, i+1);
-				//Supply the construction arguments for this fragment. Called immediately after constructing
-				//the fragment. The arguments supplied here will be retained across fragment "destroy" and "creation"
-				fragment.setArguments(args);
-				return fragment;	
+				return null;
 			}
 		}
 
@@ -164,141 +184,69 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 
 	}
 
-//	@Override
-//	public boolean onCreateOptionsMenu(Menu menu) {
-//	    MenuInflater inflater = getMenuInflater();
-//	    inflater.inflate(R.menu.activity_main, menu);
-//	    return true;
-//	}
-//
-//	@Override
-//	public boolean onOptionsItemSelected(MenuItem item) {
-//	    switch (item.getItemId()) {
-//	        case R.id.open_actionbar_map:
-//	            // app icon in action bar clicked; go home
-//	            Intent intent = new Intent(this, MapActivity.class);
-//	            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//	            startActivity(intent);
-//	            return true;
-//	        default:
-//	            return super.onOptionsItemSelected(item);
-//	    }
-//	}
+	//Get Data From Text Resource File Contains Json Data.
 
-	/**
-	 * a fragment that launches other parts of the demo application
-	 */
-	public static class LaunchpadSectionFragment extends Fragment{
+	public String getStringFromResource(int resource){
+		InputStream inputStream = getResources().openRawResource(resource);
 
-		public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstancestate){
-			//Instantiates a layout XML file into its corresponding View objects. 
-			//inflate a new view hierarchy from the specified XML node
-			View rootView = inflater.inflate(R.layout.fragment_section_launchpad, container, false);
+		ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
 
-			//demonstration of a collection-browsing activity.
-			rootView.findViewById(R.id.demo_collection_button).setOnClickListener(new View.OnClickListener(){
-				public void onClick(View view){
-
-					/*What are intents?
-					 * An intent can be thought of as the glue between activities.
-					 * It is basically a passive data stucture holding an abstract description of an action 
-					 * to be performed
-					 * Intents are asynchoronous messages which allow Android components to request 
-					 * functionality from other components of the Android system. Intents can
-					 * be used to signal to the android system that a certain event has occurred.
-					 * Other components in Android can register to this event via an intent filter.
-					 * 
-					 * Intents are sent to the Android system via a method call,
-					 * e.g. via the "startActivity()" method you can start activities.
-					 * 
-					 * In the following code, when the "demo_collection_button"
-					 * is clicked, the MainActivity sends an intent to the android
-					 * system which starts the "CollectionDemoActivity" class 
-					 * 
-					 * An Intent can contain data. e.g sending data to browser
-					 * 		String url = "http://www.google.com
-					 * 		Intent i = new Intent("Intent.ACTION_VIEW);
-					 * 		i.SetData(uri.parse(url));
-					 * 		startActivity(i);
-					 * 
-					 *Implicit Intents
-					 *	for example the following tells the Android system to view a webpage.
-					 *		Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com"));
-					 *		startActivity(i);
-					 * 
-					 * Data Transfer
-					 * 
-					 * An implicit Intent contains the action and optionally additional data. 
-					 * The receiving component can get this information via the getAction() and getData()
-					 * methods on the Intent object. The Intent object can be retrieved via the 
-					 * getIntent() method.
-					 * 
-					 * 	e.g Transferring from one activity to the next
-					 * 		
-					 * 	Activity 1		
-					 * 		//if it is a fragment use getActivity() instead of "this"
-					 * 		Intent intent = new Intent(this,Activity2.class) 
-					 * 		intent.putExtra(key, "String");
-					 * 
-					 * 	Activity 2
-					 * 		Intent intent = getIntent();
-					 * 		String message = intent.getStringExtra(key);
-					 * 
-					 * Explicit Intents
-					 * 
-					 * 	e.g: 
-					 * 	Activity 1
-					 * 		Intent i = new Intent(this, Activity2.class);
-					 * 		i.putExtra("Value1", "This is value one");
-					 * 		i.putExtra("Value2", "This is value two");
-					 * 
-					 * 	Activity 2
-					 * 		Bundle extras = getIntent().getExtras();
-					 * 		String value1 = extras.getString("Value1");
-					 * 		String value2 = extras.getString("Value2");
-					 * 
-					 * 
-					 */
-
-					Intent intent = new Intent(getActivity(),CollectionDemoActivity.class);
-					startActivity(intent);
-				}
-			});
-
-			//demonstration of navigating to external activities.
-			rootView.findViewById(R.id.demo_external_activity).setOnClickListener(new View.OnClickListener() {
-
-				@Override
-				public void onClick(View v) {
-					Intent externalActivityIntent = new Intent(Intent.ACTION_PICK);
-					externalActivityIntent.setType("image/*");
-					externalActivityIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
-					startActivity(externalActivityIntent);
-				}
-			});
-			return rootView;
+		int ctr;
+		try {
+			ctr = inputStream.read();
+			while (ctr != -1) {
+				byteArrayOutputStream.write(ctr);
+				ctr = inputStream.read();
+			}
+			inputStream.close();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
+		return byteArrayOutputStream.toString();
 	}
 
-	/**
-	 * A dummy fragment representing a section of the app, but that simply displays dummy text
-	 */
-	public static class DummySectionFragment extends Fragment{
+	public VenuesFactory[] createVenues(String pJsonString) throws JSONException{
+		VenuesFactory data[] = null;
+		try {            
+			// Parse the data into jsonobject to get original data in form of json.  
+			JSONObject jObject = new JSONObject(pJsonString);
+			//result is taken as an array because we need to loop through it
+			JSONArray result = jObject.getJSONArray("results");
+			data = new VenuesFactory[result.length()];
 
-		public static final String ARG_SECTION_NUMBER = "section_number";
 
-		public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-			//Instantiates an XML file into the corresponding View object
-			//Inflate a new view hierarchy from the spedified XML node
-			View rootView = inflater.inflate(R.layout.fragment_section_dummy,container, false);
-			//Return the arguments supplied when the fragment was instantiated, if any.
-			Bundle args = getArguments();
-			((TextView) rootView.findViewById(android.R.id.text1)).setText(
-					getString(R.string.dummy_section_text, args.getInt(ARG_SECTION_NUMBER)));
-			return rootView;
+			for (int i = 0; i < result.length(); i++) {
+
+				title = result.getJSONObject(i).getString("name");
+				address = result.getJSONObject(i).getString("formatted_address");
+				rating = result.getJSONObject(i).getDouble("rating");
+
+				//				geometry and location are JSONObjects themselves within the result JSONArray                 
+				//                "geometry": {
+				//                    "location": {
+				//                        "lat": 45.516058,
+				//                        "lng": -73.558202
+				//                    }
+				//                }
+				geometry = result.getJSONObject(i).getJSONObject("geometry");
+				location = geometry.getJSONObject("location");
+				lat = location.getDouble("lat");
+				lng = location.getDouble("lng");
+
+				data[i] = new VenuesFactory(title,address,R.drawable.five_star,lat,lng,R.drawable.letter_v);
+
+				Log.v("Venue Name", title);
+				Log.v("Venue address", address);
+				Log.v("Venue lat", lat.toString());
+				Log.v("Venue lng", lng.toString());
+				Log.v("Venue rating", rating.toString());
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
+
+		return data;
 	}
-
-
 
 }

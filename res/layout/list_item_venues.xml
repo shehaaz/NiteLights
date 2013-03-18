@@ -3,7 +3,8 @@
     android:id="@+id/tableLayout1"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#ffffff" >
+    android:background="#ffffff" 
+     android:cacheColorHint="#ffffff" >
 
 
 
@@ -54,6 +55,7 @@
         android:maxHeight="32dp"
         android:maxWidth="32dp"
         android:clickable="true"
+        android:visibility="gone"
         android:src="@drawable/discoball" />
 
 </TableLayout>
