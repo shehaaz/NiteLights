@@ -17,7 +17,7 @@
             android:clickable="true"
             android:maxHeight="32dp"
             android:maxWidth="32dp"
-            android:src="@drawable/tokyo_logo" />
+            android:src="@drawable/letter_v" />
         
 
          <TextView

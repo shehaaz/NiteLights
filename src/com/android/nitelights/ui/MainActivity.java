@@ -65,7 +65,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	 * ViewPager(Layout manager that allows the user to flip left and right through pages of data)
 	 */		 
 	ViewPager mViewPager;
-	
+	public static String committedVenue;
 
 
 
@@ -134,7 +134,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 		// When the given tab is selected, switch to the corresponding page in the ViewPager.
 		mViewPager.setCurrentItem(tab.getPosition());
 	}
-
+	
 	@Override
 	public void onTabUnselected(Tab tab, FragmentTransaction ft) {
 	}
@@ -232,7 +232,10 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 				location = geometry.getJSONObject("location");
 				lat = location.getDouble("lat");
 				lng = location.getDouble("lng");
-
+				
+				if(title.equals(committedVenue)){
+					data[i] = new VenuesFactory(title,address,R.drawable.five_star,lat,lng,R.drawable.committed_check);
+				}
 				data[i] = new VenuesFactory(title,address,R.drawable.five_star,lat,lng,R.drawable.letter_v);
 
 				Log.v("Venue Name", title);

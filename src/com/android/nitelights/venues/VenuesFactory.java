@@ -60,4 +60,8 @@ public class VenuesFactory implements Serializable {
 	public int getLogo(){
 		return logo;
 	}
+	
+	public void setLogo(int pLogo){
+		logo = pLogo;
+	}
 }
