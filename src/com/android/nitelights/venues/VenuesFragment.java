@@ -1,5 +1,7 @@
 package com.android.nitelights.venues;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
@@ -86,20 +88,20 @@ public class VenuesFragment extends ListFragment{
 			Toast.makeText(getActivity(), result, Toast.LENGTH_SHORT).show();
 			changeCommit = false;
 			committedVenue = (String) t.getText();
-//			new AlertDialog.Builder(getActivity())
-//		    .setTitle("Open Map")
-//		    .setMessage("Do you want to view this Venue in the Map?")
-//		    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-//		        public void onClick(DialogInterface dialog, int which) { 
-//		        	startActivity(i);
-//		        }
-//		     })
-//		    .setNegativeButton("No", new DialogInterface.OnClickListener() {
-//		        public void onClick(DialogInterface dialog, int which) { 
-//		            // do nothing
-//		        }
-//		     })
-//		     .show();
+			new AlertDialog.Builder(getActivity())
+		    .setTitle("Open Map")
+		    .setMessage("Do you want to view this Venue in the Map?")
+		    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+		        public void onClick(DialogInterface dialog, int which) { 
+		        	startActivity(i);
+		        }
+		     })
+		    .setNegativeButton("No", new DialogInterface.OnClickListener() {
+		        public void onClick(DialogInterface dialog, int which) { 
+		            // do nothing
+		        }
+		     })
+		     .show();
 		}
 		else{
 			if((boolean) t.getText().equals(committedVenue)){
@@ -108,6 +110,7 @@ public class VenuesFragment extends ListFragment{
 			String result = "Uncommitted from "+(String) t.getText();
 			Toast.makeText(getActivity(), result, Toast.LENGTH_SHORT).show();
 			changeCommit = true;
+			committedVenue = "";
 			}
 			else{
 				String result = "You Cannot Commit to two Venues";
@@ -115,5 +118,5 @@ public class VenuesFragment extends ListFragment{
 			}
 		}
 
-	}	
+	}
 }

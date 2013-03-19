@@ -20,6 +20,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.android.nitelights.R;
 import com.android.nitelights.profile.ProfileFragment;
@@ -61,8 +62,10 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 
 	@SuppressLint("NewApi") @Override
 	protected void onCreate(Bundle savedInstanceState) {
+		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
 		
 		jsonString = getStringFromResource(VenueJson);
 
@@ -128,6 +131,9 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	@Override
 	public void onTabUnselected(Tab tab, FragmentTransaction ft) {
 	}
+	
+
+	
 	/**
 	 * 
 	 * @author Lenovo
@@ -222,8 +228,13 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 				location = geometry.getJSONObject("location");
 				lat = location.getDouble("lat");
 				lng = location.getDouble("lng");
-				
-				data[i] = new VenuesFactory(title,address,R.drawable.five_star,lat,lng,R.drawable.letter_v);
+			
+				if(title.equals(committedVenue)){
+					data[i] = new VenuesFactory(title,address,R.drawable.five_star,lat,lng,R.drawable.committed_check);
+				}
+				else{
+					data[i] = new VenuesFactory(title,address,R.drawable.five_star,lat,lng,R.drawable.letter_v);
+				}
 
 				Log.v("Venue Name", title);
 				Log.v("Venue address", address);
@@ -238,5 +249,10 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 
 		return data;
 	}
-
+	
+	@Override
+	public void onSaveInstanceState(Bundle state){
+		super.onSaveInstanceState(state);
+		committedVenue = VenuesFragment.committedVenue;
+	}
 }
