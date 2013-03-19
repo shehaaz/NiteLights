@@ -13,30 +13,19 @@ import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
 import android.app.FragmentTransaction;
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.android.nitelights.R;
 import com.android.nitelights.profile.ProfileFragment;
-import com.android.nitelights.venues.VenuesAdapter;
 import com.android.nitelights.venues.VenuesFactory;
 import com.android.nitelights.venues.VenuesFragment;
 import com.android.nitelights.wire.WireFragment;
-import com.android.nitelights.maps.MapActivity;
 
 /**
  * 
@@ -49,6 +38,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	AppSectionsPagerAdapter mAppSectionsPagerAdapter;
 
 	public static VenuesFactory venue_data[];
+
 
 	final static int VenueJson = R.raw.venues;
 	private String jsonString;
@@ -159,11 +149,11 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 			switch(i) {
 
 			case 0:
-				Fragment wireFragment = new WireFragment(venue_data);
+				Fragment wireFragment = new WireFragment();
 				return wireFragment;
 
 			case 1:
-				Fragment venueFragment = new VenuesFragment(venue_data);
+				Fragment venueFragment = new VenuesFragment();
 				return venueFragment;
 			case 2:
 				Fragment mapButtonFragment = new MapButtonFragment();
@@ -233,9 +223,6 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 				lat = location.getDouble("lat");
 				lng = location.getDouble("lng");
 				
-				if(title.equals(committedVenue)){
-					data[i] = new VenuesFactory(title,address,R.drawable.five_star,lat,lng,R.drawable.committed_check);
-				}
 				data[i] = new VenuesFactory(title,address,R.drawable.five_star,lat,lng,R.drawable.letter_v);
 
 				Log.v("Venue Name", title);

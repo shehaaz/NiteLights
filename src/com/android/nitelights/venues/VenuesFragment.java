@@ -1,7 +1,5 @@
 package com.android.nitelights.venues;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
@@ -16,6 +14,7 @@ import android.widget.Toast;
 
 import com.android.nitelights.R;
 import com.android.nitelights.maps.MapVenueActivity;
+import com.android.nitelights.ui.MainActivity;
 
 
 
@@ -32,13 +31,9 @@ public class VenuesFragment extends ListFragment{
 	public static String committedVenue;
 	
 
-
+	//Constructor that gets the static venue_data fetched by the MainActivity
 	public VenuesFragment(){
-		System.out.println("hello");
-	}
-
-	public VenuesFragment(VenuesFactory[] venue_data) {
-		this.venue_data = venue_data;
+		this.venue_data = MainActivity.venue_data;
 	}
 
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
@@ -57,7 +52,6 @@ public class VenuesFragment extends ListFragment{
 		setListAdapter(adapter);
 		setRetainInstance(true);
 	}
-
 
 
 	//Here when the venue item is clicked open the map at the location of the venue
@@ -92,7 +86,6 @@ public class VenuesFragment extends ListFragment{
 			Toast.makeText(getActivity(), result, Toast.LENGTH_SHORT).show();
 			changeCommit = false;
 			committedVenue = (String) t.getText();
-			
 //			new AlertDialog.Builder(getActivity())
 //		    .setTitle("Open Map")
 //		    .setMessage("Do you want to view this Venue in the Map?")
