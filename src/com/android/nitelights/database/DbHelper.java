@@ -90,6 +90,13 @@ public class DbHelper {
 							KEY_VENUE_TITLE + " TEXT NOT NULL, " +
 							KEY_COMMITS + " TEXT NOT NULL);"
 					);
+			
+			db.execSQL( 
+					"CREATE TABLE " + PERSON_TABLE + " (" +
+							KEY_PERSON_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+							KEY_PERSON_NAME + " TEXT NOT NULL, " +
+							KEY_COMMITTED_VENUE + " TEXT NOT NULL);"
+					);
 		}
 
 		@Override
