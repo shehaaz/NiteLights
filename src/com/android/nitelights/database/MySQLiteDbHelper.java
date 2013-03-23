@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 
 
-public class DbHelper {
+public class MySQLiteDbHelper {
 	
 	private static final int DATABASE_VERSION = 1;
 	private static final String DATABASE_NAME = "NITELIGHTS";
@@ -32,12 +32,12 @@ public class DbHelper {
 
 
 	//Constructor
-	public DbHelper(Context c){
+	public MySQLiteDbHelper(Context c){
 		ourContext = c;
 	}
 
 	/*Methods*/
-	public DbHelper open() throws SQLException{
+	public MySQLiteDbHelper open() throws SQLException{
 		ourDBSetup = new DatabaseSetup(ourContext);
 		SQLiteDatabase = ourDBSetup.getWritableDatabase();
 		return this;
