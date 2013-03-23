@@ -84,7 +84,27 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 				.setText(R.string.title_profile)
 				.setTabListener(this));
 	}
-
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu){
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.actionbar_map, menu);
+		return true;
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item){
+		switch(item.getItemId()){
+		
+		case R.id.menu_map:
+			Intent i = new Intent(this,MapActivity.class);
+			startActivity(i);
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
+	}
+	
 	private void initializeDialog() {
 		pDialog = new ProgressDialog(this);
 		pDialog.setMessage("Loading...");
@@ -103,21 +123,6 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 		//After Loading the Venues. Set pager Adapter that will supply views for this pager as needed
 		mViewPager.setAdapter(mAppSectionsPagerAdapter);
 		pDialog.dismiss();
-	}
-
-	//*********Below are the Action Bar methods*****************//
-	@Override
-	public void onTabReselected(Tab arg0, FragmentTransaction arg1) {
-	}
-
-	@Override
-	public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
-		// When the given tab is selected, switch to the corresponding page in the ViewPager.
-		mViewPager.setCurrentItem(tab.getPosition());
-	}
-
-	@Override
-	public void onTabUnselected(Tab tab, FragmentTransaction ft) {
 	}
 
 	/**
@@ -166,25 +171,20 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	public void onSaveInstanceState(Bundle state){
 		super.onSaveInstanceState(state);
 		committedVenue = VenuesFragment.committedVenue;
-	}	
-	
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu){
-		MenuInflater inflater = getMenuInflater();
-		inflater.inflate(R.menu.actionbar_map, menu);
-		return true;
 	}
 	
+	//*********Below are the Action Bar methods*****************//
 	@Override
-	public boolean onOptionsItemSelected(MenuItem item){
-		switch(item.getItemId()){
-		
-		case R.id.menu_map:
-			Intent i = new Intent(this,MapActivity.class);
-			startActivity(i);
-			return true;
-		default:
-			return super.onOptionsItemSelected(item);
-		}
+	public void onTabReselected(Tab arg0, FragmentTransaction arg1) {
+	}
+
+	@Override
+	public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
+		// When the given tab is selected, switch to the corresponding page in the ViewPager.
+		mViewPager.setCurrentItem(tab.getPosition());
+	}
+
+	@Override
+	public void onTabUnselected(Tab tab, FragmentTransaction ft) {
 	}
 }
