@@ -15,6 +15,7 @@ public class VenuesFactory implements Serializable {
 	 * 
 	 */
 	
+	private int venue_id;
 	private String title;
 	private String address;
 	private int rating;
@@ -22,7 +23,7 @@ public class VenuesFactory implements Serializable {
 	private double lng;
 	private int logo;
 	
-	public VenuesFactory(String pTitle, String pAddress, int pRating, double plat, double pLng, int pLogo){
+	public VenuesFactory(int pVenue_id,String pTitle, String pAddress, int pRating, double plat, double pLng, int pLogo){
 		super();
 		
 		title = pTitle;
@@ -31,6 +32,7 @@ public class VenuesFactory implements Serializable {
 		lat = plat;
 		lng = pLng;
 		logo = pLogo;
+		venue_id = pVenue_id;
 	}
 	
 	public String getTitle(){
@@ -63,5 +65,9 @@ public class VenuesFactory implements Serializable {
 	
 	public void setLogo(int pLogo){
 		logo = pLogo;
+	}
+	
+	public int getVenueID(){
+		return venue_id;
 	}
 }

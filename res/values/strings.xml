@@ -24,5 +24,6 @@
     <string name="open_map">Open Map</string>
     <string name="committed_to"> Committed To</string>
     <string name="person_name">John Smith</string>
+    <string name="all_venues">http://niteflow.com/AndroidDB/get_all_venues.php</string>
 
 </resources>

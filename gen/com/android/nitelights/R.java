@@ -377,33 +377,32 @@ containing a value of this type.
         public static final int grey_frame=0x7f02002d;
         public static final int ic_launcher=0x7f02002e;
         public static final int ic_launcher1=0x7f02002f;
-        public static final int icon=0x7f020030;
-        public static final int item_activated=0x7f020031;
-        public static final int item_checked=0x7f020032;
-        public static final int item_focused=0x7f020033;
-        public static final int item_pressed=0x7f020034;
-        public static final int letter_v=0x7f020035;
-        public static final int light_ultra_club_logo=0x7f020036;
-        public static final int list_extra_button_background=0x7f020037;
-        public static final int list_extra_button_left_border=0x7f020038;
-        public static final int map_marker=0x7f020039;
-        public static final int one_half_star=0x7f02003a;
-        public static final int one_star=0x7f02003b;
-        public static final int open_map=0x7f02003c;
-        public static final int open_map_trans=0x7f02003d;
-        public static final int profile_picture=0x7f02003e;
-        public static final int radio_lounge_logo=0x7f02003f;
-        public static final int schedule_time_background=0x7f020040;
-        public static final int star_rating=0x7f020041;
-        public static final int stereo_nightclub_logo=0x7f020042;
-        public static final int three_half_star=0x7f020043;
-        public static final int three_star=0x7f020044;
-        public static final int tokyo_logo=0x7f020045;
-        public static final int two_half_star=0x7f020046;
-        public static final int two_star=0x7f020047;
+        public static final int item_activated=0x7f020030;
+        public static final int item_checked=0x7f020031;
+        public static final int item_focused=0x7f020032;
+        public static final int item_pressed=0x7f020033;
+        public static final int letter_v=0x7f020034;
+        public static final int light_ultra_club_logo=0x7f020035;
+        public static final int list_extra_button_background=0x7f020036;
+        public static final int list_extra_button_left_border=0x7f020037;
+        public static final int map_marker=0x7f020038;
+        public static final int one_half_star=0x7f020039;
+        public static final int one_star=0x7f02003a;
+        public static final int open_map=0x7f02003b;
+        public static final int open_map_trans=0x7f02003c;
+        public static final int profile_picture=0x7f02003d;
+        public static final int radio_lounge_logo=0x7f02003e;
+        public static final int schedule_time_background=0x7f02003f;
+        public static final int star_rating=0x7f020040;
+        public static final int stereo_nightclub_logo=0x7f020041;
+        public static final int three_half_star=0x7f020042;
+        public static final int three_star=0x7f020043;
+        public static final int tokyo_logo=0x7f020044;
+        public static final int two_half_star=0x7f020045;
+        public static final int two_star=0x7f020046;
     }
     public static final class id {
-        public static final int buttonSignOut=0x7f050032;
+        public static final int buttonSignOut=0x7f050031;
         public static final int com_facebook_login_activity_progress_bar=0x7f05000d;
         public static final int com_facebook_picker_activity_circle=0x7f05000c;
         public static final int com_facebook_picker_checkbox=0x7f05000f;
@@ -431,10 +430,10 @@ containing a value of this type.
         public static final int listitem_icon=0x7f050029;
         public static final int listitem_venue_icon=0x7f050025;
         public static final int listitem_wire_icon=0x7f05002a;
-        public static final int logo=0x7f05002f;
+        public static final int logo=0x7f05002e;
         public static final int map=0x7f050009;
-        public static final int mapFragment=0x7f05002e;
-        public static final int menu_settings=0x7f05003b;
+        public static final int mapFragment=0x7f05002d;
+        public static final int menu_settings=0x7f05003a;
         public static final int none=0x7f050000;
         public static final int normal=0x7f050001;
         public static final int open_map_button=0x7f050020;
@@ -442,8 +441,8 @@ containing a value of this type.
         public static final int pager_title_strip=0x7f050008;
         public static final int person_wire_name=0x7f05002b;
         public static final int picker_subtitle=0x7f05001c;
-        public static final int profileFirstName=0x7f050030;
-        public static final int profileLastName=0x7f050031;
+        public static final int profileFirstName=0x7f05002f;
+        public static final int profileLastName=0x7f050030;
         public static final int root_container=0x7f05000a;
         public static final int satellite=0x7f050002;
         public static final int search_box=0x7f05001b;
@@ -451,18 +450,17 @@ containing a value of this type.
         public static final int star_icon=0x7f050028;
         public static final int tableLayout1=0x7f050024;
         public static final int terrain=0x7f050003;
-        public static final int text=0x7f05002d;
         public static final int title_venue=0x7f050026;
         public static final int title_venue_address=0x7f050027;
         public static final int venue_wire_title=0x7f05002c;
-        public static final int widget39=0x7f05003a;
-        public static final int widget40=0x7f050037;
-        public static final int widget42=0x7f050036;
-        public static final int widget43=0x7f050038;
-        public static final int widget44=0x7f050035;
-        public static final int widget46=0x7f050034;
-        public static final int widget47=0x7f050039;
-        public static final int widget48=0x7f050033;
+        public static final int widget39=0x7f050039;
+        public static final int widget40=0x7f050036;
+        public static final int widget42=0x7f050035;
+        public static final int widget43=0x7f050037;
+        public static final int widget44=0x7f050034;
+        public static final int widget46=0x7f050033;
+        public static final int widget47=0x7f050038;
+        public static final int widget48=0x7f050032;
     }
     public static final class layout {
         public static final int activity_collection_demo=0x7f030000;
@@ -495,10 +493,9 @@ containing a value of this type.
         public static final int list_item_wire=0x7f03001b;
         public static final int list_venues=0x7f03001c;
         public static final int list_wire=0x7f03001d;
-        public static final int main=0x7f03001e;
-        public static final int map=0x7f03001f;
-        public static final int profile=0x7f030020;
-        public static final int venues=0x7f030021;
+        public static final int map=0x7f03001e;
+        public static final int profile=0x7f03001f;
+        public static final int venues=0x7f030020;
     }
     public static final class menu {
         public static final int activity_collection_demo=0x7f0a0000;
@@ -510,10 +507,8 @@ containing a value of this type.
         public static final int venues=0x7f040000;
     }
     public static final class string {
-        public static final int ENDPOINT=0x7f06002d;
-        public static final int SERVER=0x7f06002e;
-        public static final int SESSION_LIFETIME=0x7f06002f;
-        public static final int app_name=0x7f06002b;
+        public static final int all_venues=0x7f060041;
+        public static final int app_name=0x7f06002a;
         /**   Title for notification shown when GooglePlayServices is unavailable [CHAR LIMIT=70] 
          */
         public static final int auth_client_availability_notification_title=0x7f06000e;
@@ -548,7 +543,7 @@ containing a value of this type.
         public static final int com_facebook_usersettingsfragment_log_in_button=0x7f060019;
         public static final int com_facebook_usersettingsfragment_logged_in=0x7f06001a;
         public static final int com_facebook_usersettingsfragment_not_logged_in=0x7f06001b;
-        public static final int committed_to=0x7f060044;
+        public static final int committed_to=0x7f06003f;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=40] 
@@ -602,29 +597,27 @@ containing a value of this type.
         find the service-side assets. [CHAR LIMIT=25] 
          */
         public static final int common_signin_button_text_long=0x7f06000d;
-        public static final int demo_collection=0x7f060033;
-        public static final int demo_external_activity=0x7f060034;
-        public static final int dummy_section_text=0x7f060035;
-        public static final int hello=0x7f06002a;
-        public static final int hello_world=0x7f060030;
-        public static final int logout=0x7f060039;
-        public static final int menu_settings=0x7f060031;
-        public static final int open_map=0x7f060043;
-        public static final int person_name=0x7f060045;
-        public static final int profile_first_name=0x7f060036;
-        public static final int profile_last_name=0x7f060037;
-        public static final int profile_picture=0x7f060038;
-        public static final int sharedpreferences_name=0x7f06002c;
-        public static final int title_activity_collection_demo=0x7f060032;
-        public static final int title_activity_map=0x7f060042;
-        public static final int title_map=0x7f06003d;
-        public static final int title_profile=0x7f06003b;
-        public static final int title_the_wire=0x7f06003a;
-        public static final int title_venue=0x7f06003f;
-        public static final int title_venue_address=0x7f06003e;
-        public static final int title_venue_num_commits=0x7f060041;
-        public static final int title_venue_rating=0x7f060040;
-        public static final int title_venues=0x7f06003c;
+        public static final int demo_collection=0x7f06002e;
+        public static final int demo_external_activity=0x7f06002f;
+        public static final int dummy_section_text=0x7f060030;
+        public static final int hello_world=0x7f06002b;
+        public static final int logout=0x7f060034;
+        public static final int menu_settings=0x7f06002c;
+        public static final int open_map=0x7f06003e;
+        public static final int person_name=0x7f060040;
+        public static final int profile_first_name=0x7f060031;
+        public static final int profile_last_name=0x7f060032;
+        public static final int profile_picture=0x7f060033;
+        public static final int title_activity_collection_demo=0x7f06002d;
+        public static final int title_activity_map=0x7f06003d;
+        public static final int title_map=0x7f060038;
+        public static final int title_profile=0x7f060036;
+        public static final int title_the_wire=0x7f060035;
+        public static final int title_venue=0x7f06003a;
+        public static final int title_venue_address=0x7f060039;
+        public static final int title_venue_num_commits=0x7f06003c;
+        public static final int title_venue_rating=0x7f06003b;
+        public static final int title_venues=0x7f060037;
     }
     public static final class style {
         /** 
