@@ -433,7 +433,8 @@ containing a value of this type.
         public static final int logo=0x7f05002e;
         public static final int map=0x7f050009;
         public static final int mapFragment=0x7f05002d;
-        public static final int menu_settings=0x7f05003a;
+        public static final int menu_map=0x7f05003a;
+        public static final int menu_settings=0x7f05003b;
         public static final int none=0x7f050000;
         public static final int normal=0x7f050001;
         public static final int open_map_button=0x7f050020;
@@ -498,10 +499,11 @@ containing a value of this type.
         public static final int venues=0x7f030020;
     }
     public static final class menu {
-        public static final int activity_collection_demo=0x7f0a0000;
-        public static final int activity_main=0x7f0a0001;
-        public static final int activity_map=0x7f0a0002;
-        public static final int activity_map_full=0x7f0a0003;
+        public static final int actionbar_map=0x7f0a0000;
+        public static final int activity_collection_demo=0x7f0a0001;
+        public static final int activity_main=0x7f0a0002;
+        public static final int activity_map=0x7f0a0003;
+        public static final int activity_map_full=0x7f0a0004;
     }
     public static final class raw {
         public static final int venues=0x7f040000;

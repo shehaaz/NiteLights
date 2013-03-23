@@ -5,15 +5,20 @@ import android.app.ActionBar;
 import android.app.ActionBar.Tab;
 import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 import com.android.nitelights.R;
 import com.android.nitelights.database.LoadMySQLData;
+import com.android.nitelights.maps.MapActivity;
 import com.android.nitelights.profile.ProfileFragment;
 import com.android.nitelights.venues.VenuesFactory;
 import com.android.nitelights.venues.VenuesFragment;
@@ -76,9 +81,6 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 				.setText(R.string.title_venues)
 				.setTabListener(this));
 		actionBar.addTab(actionBar.newTab()
-				.setText(R.string.title_map)
-				.setTabListener(this));
-		actionBar.addTab(actionBar.newTab()
 				.setText(R.string.title_profile)
 				.setTabListener(this));
 	}
@@ -127,7 +129,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	 */
 	public static class AppSectionsPagerAdapter extends FragmentPagerAdapter {
 
-		private static final int NUM_SECTIONS = 4;
+		private static final int NUM_SECTIONS = 3;
 
 		public AppSectionsPagerAdapter(FragmentManager fm) {
 			super(fm);
@@ -145,10 +147,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 			case 1:
 				Fragment venueFragment = new VenuesFragment();
 				return venueFragment;
-			case 2:
-				Fragment mapButtonFragment = new MapButtonFragment();
-				return mapButtonFragment;
-			case 3: 	
+			case 2: 	
 				Fragment profileFragment = new ProfileFragment();
 				return profileFragment;
 
@@ -168,4 +167,24 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 		super.onSaveInstanceState(state);
 		committedVenue = VenuesFragment.committedVenue;
 	}	
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu){
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.actionbar_map, menu);
+		return true;
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item){
+		switch(item.getItemId()){
+		
+		case R.id.menu_map:
+			Intent i = new Intent(this,MapActivity.class);
+			startActivity(i);
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
+	}
 }
