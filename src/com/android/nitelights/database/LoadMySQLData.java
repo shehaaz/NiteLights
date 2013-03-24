@@ -10,7 +10,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.os.AsyncTask;
-import android.os.Bundle;
 import android.util.Log;
 
 import com.android.nitelights.R;
@@ -98,7 +97,7 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 
 		// Building Parameters
 		List<NameValuePair> wire_params = new ArrayList<NameValuePair>();
-		wire_params.add(new BasicNameValuePair("uid", "1")); //entering as USER_Id = 1
+		wire_params.add(new BasicNameValuePair("uid", "85")); //entering as USER_Id = 1
 
 		// getting JSON string from URL
 		JSONObject jObject_Wire = jParser.makeHttpRequest(serviceWire, "GET", wire_params);
