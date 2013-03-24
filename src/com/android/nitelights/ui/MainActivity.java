@@ -23,6 +23,7 @@ import com.android.nitelights.profile.ProfileFragment;
 import com.android.nitelights.venues.VenuesFactory;
 import com.android.nitelights.venues.VenuesFragment;
 import com.android.nitelights.wire.WireFragment;
+import com.android.nitelights.wire.WireFactory;
 
 /**
  * 
@@ -33,7 +34,9 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 
 	static AppSectionsPagerAdapter mAppSectionsPagerAdapter;
 	public static VenuesFactory venue_data[];
+	public static WireFactory wire_data[];
 	private String url_all_venues = "http://niteflow.com/AndroidDB/get_all_venues.php";
+	private String url_all_wire_data = "http://niteflow.com/AndroidDB/get_user_wire_data.php";
 	static ViewPager mViewPager;//ViewPager(Layout manager that allows the user to flip left and right through pages of data)
 	public static String committedVenue;
 	private ProgressDialog pDialog;
@@ -115,11 +118,19 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 
 	private void startWebService() {
 		//Load All venues in background thread
-		new LoadMySQLData().execute(this,url_all_venues);
+		new LoadMySQLData().execute(this,url_all_venues,url_all_wire_data);
 	}
 
 	public void setVenues(VenuesFactory[] pVenues){
 		venue_data = pVenues;
+
+	}
+	
+	public void setWire(WireFactory[] pWire){
+		wire_data = pWire;
+	}
+	
+	public void setAdapter(){
 		//After Loading the Venues. Set pager Adapter that will supply views for this pager as needed
 		mViewPager.setAdapter(mAppSectionsPagerAdapter);
 		pDialog.dismiss();
