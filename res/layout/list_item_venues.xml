@@ -1,61 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/tableLayout1"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@drawable/list_item_venues_drawable" 
-     android:cacheColorHint="#ffffff" >
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dip" >
 
-
-
-    <TableRow>
+    <LinearLayout
+        android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="5dip"
+        android:padding="3dip" >
 
         <ImageView
             android:id="@+id/listitem_venue_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:maxHeight="32dp"
-            android:maxWidth="32dp"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
             android:src="@drawable/letter_v" />
-        
+    </LinearLayout>
 
-         <TextView
-            android:id="@+id/title_venue"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="4dip"
-            android:paddingTop="8dip"
-            android:paddingLeft="8dip"
-            android:text="@string/title_venue"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-                
-    </TableRow>
+    <TextView
+        android:id="@+id/title_venue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="@string/title_venue"
+        android:textColor="#040404"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/list_venue_arrow" />
 
     <TextView
         android:id="@+id/title_venue_address"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingBottom="6dip"
-        android:paddingLeft="8dip"
+        android:layout_alignBottom="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
         android:text="@string/title_venue_address"
         android:textSize="15sp" />
-    
-    <ImageView
-        android:id="@+id/star_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/five_star" />
-    
-    <ImageView
-        android:id="@+id/listitem_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:maxHeight="32dp"
-        android:maxWidth="32dp"
-        android:clickable="true"
-        android:visibility="gone"
-        android:src="@drawable/discoball" />
 
-</TableLayout>
+</RelativeLayout>

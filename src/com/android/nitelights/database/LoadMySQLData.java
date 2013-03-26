@@ -36,6 +36,8 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 	private String wire_title = "";
 	double venue_lng;
 	double venue_lat; 
+	String number_commited; 
+	int rating;
 
 	/**
 	 * Before starting background thread Show Progress Dialog
@@ -82,13 +84,11 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 					address = venues.getJSONObject(i).getString("field_address_thoroughfare");
 					venue_lng = Double.parseDouble(venues.getJSONObject(i).getString("field_geo_lon"));
 					venue_lat = Double.parseDouble(venues.getJSONObject(i).getString("field_geo_lat"));
+					number_commited = venues.getJSONObject(i).getString("Number_Commited");
+					rating = Integer.parseInt(venues.getJSONObject(i).getString("Rating"));
 
-					if(title.equals(MainActivity.committedVenue)){
-						data[i] = new VenuesFactory(venue_id,title,address,R.drawable.five_star,venue_lat,venue_lng,R.drawable.committed_check);
-					}
-					else{
-						data[i] = new VenuesFactory(venue_id,title,address,R.drawable.five_star,venue_lat,venue_lng,R.drawable.letter_v);
-					}
+					data[i] = new VenuesFactory(venue_id,title,address,rating,venue_lat,venue_lng,number_commited,R.drawable.letter_v);
+
 				}
 			}
 		} catch (JSONException e) {

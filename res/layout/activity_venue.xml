@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	android:id="@+id/widget48"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:background="#363844">
+<LinearLayout
+	android:id="@+id/widget46"
+	android:layout_width="wrap_content"
+	android:layout_height="91dp"
+	android:orientation="vertical"
+	android:layout_centerVertical="true"
+	android:layout_centerHorizontal="true">
+<TextView
+	android:id="@+id/activity_venue_title"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="@string/title_venue" 
+	android:textSize="20sp"
+    android:textStyle="bold"
+    android:textColor="#ffffff"/>
+<TextView
+	android:id="@+id/venue_num_commits"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="@string/title_venue_num_commits" 
+	android:textColor="#ffffff"/>
+
+<TextView
+    android:id="@+id/activity_venue_address"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/title_venue_address" 
+    android:textColor="#ffffff"/>
+
+</LinearLayout>
+<LinearLayout
+	android:id="@+id/widget47"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:layout_alignParentTop="true"
+	android:layout_alignParentLeft="true">
+</LinearLayout>
+
+<ImageButton
+    android:id="@+id/venue_page_commit_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_below="@+id/widget46"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="24dp"
+    android:src="@drawable/commit_button" />
+
+<ImageView
+    android:id="@+id/widget39"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:src="@drawable/letter_v_large" />
+
+<ImageButton
+    android:id="@+id/venue_page_open_map_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_alignTop="@+id/venue_page_commit_button"
+    android:layout_marginRight="16dp"
+    android:src="@drawable/venue_page_open_map_button" />
+
+<ImageView
+    android:id="@+id/venue_activity_rating"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/venue_page_commit_button"
+    android:layout_alignRight="@+id/widget39"
+    android:src="@drawable/five_star" />
+
+</RelativeLayout>
+

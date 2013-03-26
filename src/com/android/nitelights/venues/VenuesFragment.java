@@ -61,62 +61,10 @@ public class VenuesFragment extends ListFragment{
 	public void onListItemClick(ListView l, View v, int position, long id)
 	{
 	
+		Intent i = new Intent(getActivity(), VenueActivity.class);
 		
-		final Intent i = new Intent(getActivity(), MapVenueActivity.class);
-		LinearLayout parent = (LinearLayout) v;
+		i.putExtra("THE_VENUE", venue_data[position]);
 		
-
-
-		t = (TextView) parent.findViewById(R.id.title_venue);
-		String venueName = (String) t.getText();
-
-
-
-		for(VenuesFactory vf : venue_data){
-			if(vf.getTitle()==venueName){
-				i.putExtra("VENUE_LOCATION",vf);
-			}
-		}
-
-		TextView t = (TextView) parent.findViewById(R.id.title_venue);
-		ImageView logo = (ImageView) parent.findViewById(R.id.listitem_venue_icon);
-		
-		if(changeCommit){
-			venue_data[position].setLogo(R.drawable.committed_check);
-			logo.setImageResource(R.drawable.committed_check);
-			String result = "Committed to "+(String) t.getText();
-			Toast.makeText(getActivity(), result, Toast.LENGTH_SHORT).show();
-			changeCommit = false;
-			committedVenue = (String) t.getText();
-			new AlertDialog.Builder(getActivity())
-		    .setTitle("Open Map")
-		    .setMessage("Do you want to view this Venue in the Map?")
-		    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-		        public void onClick(DialogInterface dialog, int which) { 
-		        	startActivity(i);
-		        }
-		     })
-		    .setNegativeButton("No", new DialogInterface.OnClickListener() {
-		        public void onClick(DialogInterface dialog, int which) { 
-		            // do nothing
-		        }
-		     })
-		     .show();
-		}
-		else{
-			if((boolean) t.getText().equals(committedVenue)){
-			venue_data[position].setLogo(R.drawable.letter_v);	
-			logo.setImageResource(R.drawable.letter_v);	
-			String result = "Uncommitted from "+(String) t.getText();
-			Toast.makeText(getActivity(), result, Toast.LENGTH_SHORT).show();
-			changeCommit = true;
-			committedVenue = "";
-			}
-			else{
-				String result = "You Cannot Commit to two Venues";
-				Toast.makeText(getActivity(), result, Toast.LENGTH_SHORT).show();
-			}
-		}
-
+		startActivity(i);
 	}
 }
