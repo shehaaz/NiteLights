@@ -33,16 +33,6 @@
             android:name="com.android.nitelights.ui.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.android.nitelights.ui.CollectionDemoActivity"
-            android:label="@string/title_activity_collection_demo"
-            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.android.nitelights.ui.VenuesFragment$VenuesActivity"
@@ -67,6 +57,16 @@
         <activity
             android:name="com.android.nitelights.venues.VenueActivity"
             android:label="@string/title_activity_venue" >
+        </activity>
+        <activity
+            android:name="com.android.nitelights.login.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

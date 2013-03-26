@@ -18,7 +18,9 @@ import android.view.MenuItem;
 
 import com.android.nitelights.R;
 import com.android.nitelights.database.LoadMySQLData;
+import com.android.nitelights.login.LoginActivity;
 import com.android.nitelights.maps.MapActivity;
+import com.android.nitelights.profile.ProfileFactory;
 import com.android.nitelights.profile.ProfileFragment;
 import com.android.nitelights.venues.VenuesFactory;
 import com.android.nitelights.venues.VenuesFragment;
@@ -35,43 +37,39 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	static AppSectionsPagerAdapter mAppSectionsPagerAdapter;
 	public static VenuesFactory venue_data[];
 	public static WireFactory wire_data[];
+	public static ProfileFactory user_data;
 	private String url_all_venues = "http://niteflow.com/AndroidDB/get_all_venues.php";
 	private String url_all_wire_data = "http://niteflow.com/AndroidDB/get_user_wire_data.php";
-	static ViewPager mViewPager;//ViewPager(Layout manager that allows the user to flip left and right through pages of data)
+	private String url_user_data = "http://niteflow.com/AndroidDB/get_user_name_from_uid.php";
+	static ViewPager mViewPager;
 	public static String committedVenue;
 	private ProgressDialog pDialog;
+	private String uid;
 
 	@SuppressLint("NewApi") @Override
 	protected void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		//set userID from loginActivity
+		uid = LoginActivity.uid;
 
+		//Initialize Dialog and Start Web Service
 		initializeDialog();
 		startWebService();
 
-		//Set up action bar
+	
 		final ActionBar actionBar = getActionBar();
-
-		//Specify that the Home/Up button should not be enabled, since there is no hierarchical parent
 		actionBar.setHomeButtonEnabled(false);
-
-		//specify that we will be displaying tabs in the action bar
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
-		//Create the adapter that will return a Fragment(A Fragment is a piece of an application's
-		//user interface or behavior that can be placed in an Activity) 
-		//for each of the four primary sections of the app
 		mAppSectionsPagerAdapter = new AppSectionsPagerAdapter(getSupportFragmentManager());
 
-		//set up the ViewPager, attaching the adapter and setting up a listener for when the user
-		//swipes between sections.
 		mViewPager = (ViewPager) findViewById(R.id.pager);
 
-		//set a listener that will be invoked whenever the page changes or is incrementally scrolled
 		mViewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener(){
 			public void onPageSelected(int position){
-				//when swiping between sections, select the corresponding tab
 				actionBar.setSelectedNavigationItem(position);
 			}
 		});
@@ -118,7 +116,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 
 	private void startWebService() {
 		//Load All venues in background thread
-		new LoadMySQLData().execute(this,url_all_venues,url_all_wire_data);
+		new LoadMySQLData().execute(this,url_all_venues,url_all_wire_data,uid,url_user_data);
 	}
 
 	public void setVenues(VenuesFactory[] pVenues){
@@ -128,6 +126,10 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	
 	public void setWire(WireFactory[] pWire){
 		wire_data = pWire;
+	}
+	
+	public void setUser(ProfileFactory pUser_data) {
+		user_data = pUser_data;
 	}
 	
 	public void setAdapter(){
@@ -198,4 +200,6 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	@Override
 	public void onTabUnselected(Tab tab, FragmentTransaction ft) {
 	}
+
+
 }
