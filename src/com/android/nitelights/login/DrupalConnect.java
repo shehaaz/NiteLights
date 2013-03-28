@@ -18,7 +18,7 @@ import redstone.xmlrpc.XmlRpcStruct;
  */
 public class DrupalConnect {
 	/** Base url of Drupal installation */
-	final static private String URLBASE = "http://niteflow.com";
+	final static private String URLBASE = "http://db.niteflow.com";
 	
 	/** XML-RPC url */
 	final static private String XMLRPC = URLBASE + "/?q=androidrpc";

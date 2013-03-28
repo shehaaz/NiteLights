@@ -4,7 +4,7 @@
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
 	xmlns:android="http://schemas.android.com/apk/res/android"
-	android:background="#363844">
+	android:background="#3b5998">
 <LinearLayout
 	android:id="@+id/widget46"
 	android:layout_width="wrap_content"
@@ -13,28 +13,15 @@
 	android:layout_centerVertical="true"
 	android:layout_centerHorizontal="true">
 <TextView
-	android:id="@+id/activity_venue_title"
-	android:layout_width="wrap_content"
-	android:layout_height="wrap_content"
-	android:text="@string/title_venue" 
-	android:textSize="20sp"
-    android:textStyle="bold"
-    android:textColor="#ffffff"/>
-<TextView
 	android:id="@+id/venue_num_commits"
 	android:layout_width="wrap_content"
 	android:layout_height="wrap_content"
 	android:text="@string/title_venue_num_commits" 
-	android:textColor="#ffffff"/>
-
-<TextView
-    android:id="@+id/activity_venue_address"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="@string/title_venue_address" 
-    android:textColor="#ffffff"/>
-
+	android:textColor="#ffffff"
+	android:typeface="sans"
+    android:textSize="40sp"/>
 </LinearLayout>
+
 <LinearLayout
 	android:id="@+id/widget47"
 	android:layout_width="wrap_content"
@@ -44,40 +31,53 @@
 	android:layout_alignParentLeft="true">
 </LinearLayout>
 
-<ImageButton
-    android:id="@+id/venue_page_commit_button"
+<TextView
+    android:id="@+id/activity_venue_title"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_alignParentLeft="true"
-    android:layout_below="@+id/widget46"
-    android:layout_marginTop="20dp"
-    android:layout_marginLeft="24dp"
-    android:src="@drawable/commit_button" />
-
-<ImageView
-    android:id="@+id/widget39"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentTop="true"
+    android:layout_above="@+id/venue_activity_rating"
     android:layout_centerHorizontal="true"
-    android:src="@drawable/letter_v_large" />
-
-<ImageButton
-    android:id="@+id/venue_page_open_map_button"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentRight="true"
-    android:layout_alignTop="@+id/venue_page_commit_button"
-    android:layout_marginRight="16dp"
-    android:src="@drawable/venue_page_open_map_button" />
+    android:layout_marginBottom="18dp"
+    android:text="@string/title_venue"
+    android:textColor="#ffffff"
+    android:textSize="20sp"
+    android:textStyle="bold" />
 
 <ImageView
     android:id="@+id/venue_activity_rating"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_above="@+id/venue_page_commit_button"
-    android:layout_alignRight="@+id/widget39"
+    android:layout_above="@+id/widget46"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="16dp"
     android:src="@drawable/five_star" />
+
+<ImageView
+    android:id="@+id/widget39"
+    android:layout_width="wrap_content"
+    android:layout_height="80dp"
+    android:layout_alignLeft="@+id/venue_activity_rating"
+    android:layout_alignParentTop="true"
+    android:scaleType="fitCenter"
+    android:src="@drawable/letter_v_large" />
+
+<TextView
+    android:id="@+id/activity_venue_address"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/venue_activity_rating"
+    android:layout_centerHorizontal="true"
+    android:gravity="center"
+    android:text="@string/title_venue_address"
+    android:textColor="#ffffff" />
+
+<ImageView
+    android:id="@+id/venue_page_open_map_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignLeft="@+id/venue_activity_rating"
+    android:layout_below="@+id/widget46"
+    android:src="@drawable/venue_map_icon" />
 
 </RelativeLayout>
 

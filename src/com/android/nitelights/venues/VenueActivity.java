@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -42,7 +43,7 @@ public class VenueActivity extends Activity {
 
 		venue_title.setText(venue.getTitle());
 		venue_address.setText(venue.getAddress());
-		venue_commits.setText(venue.getNumCommits()+" Attending");
+		venue_commits.setText("Attendance: "+venue.getNumCommits());
 		venue_rating.setImageResource(venue.getRating());
 		
 		ListenToButtons();
@@ -51,20 +52,8 @@ public class VenueActivity extends Activity {
 
 	public void ListenToButtons() {
  
-		ImageButton commitButton = (ImageButton) findViewById(R.id.venue_page_commit_button);
- 
-		commitButton.setOnClickListener(new OnClickListener() {
- 
-			@Override
-			public void onClick(View v) {
- 
-			   Toast.makeText(VenueActivity.this,"commit clicked!", Toast.LENGTH_SHORT).show();
- 
-			}
- 
-		});
 		
-		ImageButton mapButton = (ImageButton) findViewById(R.id.venue_page_open_map_button);
+		ImageView mapButton = (ImageView) findViewById(R.id.venue_page_open_map_button);
 		 
 		mapButton.setOnClickListener(new OnClickListener() {
  

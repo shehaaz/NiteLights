@@ -34,10 +34,11 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 	//Data
 	private String uid;
 	private int venue_id;
-	private String title = "";
-	private String address = "";
-	private String wire_name = "";
-	private String wire_title = "";
+	private String title;
+	private String address;
+	private String wire_name;
+	private String wire_title;
+	private String wire_timestamp;
 	private double venue_lng;
 	private double venue_lat; 
 	private String number_commited; 
@@ -133,11 +134,12 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 
 					wire_name = wire.getJSONObject(i).getString("name");
 					wire_title = wire.getJSONObject(i).getString("title");
-					wire_data[i] = new WireFactory(wire_name,wire_title);
+					wire_timestamp = wire.getJSONObject(i).getString("timestamp");
+					wire_data[i] = new WireFactory(wire_name,wire_title,wire_timestamp);
 				}
 			}
 			else{
-				wire_data = new WireFactory[] {new WireFactory("No One","   Any Venues")};
+				wire_data = new WireFactory[] {new WireFactory("No One","   Any Venues",null)};
 			}
 		} catch (JSONException e) {
 			e.printStackTrace();
