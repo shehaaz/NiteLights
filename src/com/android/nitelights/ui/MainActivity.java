@@ -105,6 +105,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 		
 		case R.id.menu_map:
 			Intent i = new Intent(this,MapActivity.class);
+			i.putExtra("VENUE_LIST", venue_data);
 			startActivity(i);
 			return true;
 		default:

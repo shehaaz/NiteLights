@@ -45,8 +45,8 @@ public class MapVenueActivity extends Activity {
 	    map.getUiSettings().setZoomControlsEnabled(true);
 	    map.getUiSettings().setCompassEnabled(true);
 	    
-	    Intent i = getIntent();
-		VenuesFactory venue = (VenuesFactory)i.getSerializableExtra("VENUE_LOCATION");
+	    Bundle bundle = getIntent().getExtras();
+		VenuesFactory venue = bundle.getParcelable("VENUE_LOCATION");
 		lat = venue.getLat();
 		lng = venue.getLng();
 		venueLocation = new LatLng(lat,lng);
@@ -54,7 +54,7 @@ public class MapVenueActivity extends Activity {
 		
 	    map.addMarker(new MarkerOptions().position(venueLocation)
 	            .title(venue.getTitle())
-	            .snippet("This is "+venue.getTitle())
+	            .snippet(venue.getAddress())
 	            .icon(BitmapDescriptorFactory
 	            		.fromResource(R.drawable.map_marker)));
 

@@ -8,15 +8,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.nitelights.R;
-import com.android.nitelights.ui.MainActivity;
 import com.android.nitelights.maps.MapVenueActivity;
+import com.android.nitelights.ui.MainActivity;
 
 public class VenueActivity extends Activity {
 	
@@ -37,8 +34,8 @@ public class VenueActivity extends Activity {
 		TextView venue_commits = (TextView) findViewById(R.id.venue_num_commits);
 		ImageView venue_rating = (ImageView) findViewById(R.id.venue_activity_rating);
 
-		Intent i = getIntent();
-		venue = (VenuesFactory)i.getSerializableExtra("THE_VENUE");
+		Bundle bundle = getIntent().getExtras();
+		venue = (VenuesFactory)bundle.getParcelable("THE_VENUE");
 
 
 		venue_title.setText(venue.getTitle());

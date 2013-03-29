@@ -1,21 +1,14 @@
 package com.android.nitelights.venues;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.nitelights.R;
-import com.android.nitelights.maps.MapVenueActivity;
 import com.android.nitelights.ui.MainActivity;
 
 
@@ -25,8 +18,6 @@ import com.android.nitelights.ui.MainActivity;
  */
 public class VenuesFragment extends ListFragment{
 
-	//	static ArrayList<HashMap<String, String>> venueList;
-	private TextView t;
 	VenuesFactory venue_data[];
 	private VenuesAdapter adapter;
 	public static boolean changeCommit = true;

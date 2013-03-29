@@ -1,21 +1,16 @@
 package com.android.nitelights.venues;
 
-import java.io.Serializable;
+import android.os.Parcel;
+import android.os.Parcelable;
 
 import com.android.nitelights.R;
 
 /**
  * Creates new Venue objects
  */
-public class VenuesFactory implements Serializable {
+public class VenuesFactory implements Parcelable  {
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 5918501069145727448L;
-	/**
-	 * 
-	 */
+
 	
 	private int venue_id;
 	private String title;
@@ -39,6 +34,17 @@ public class VenuesFactory implements Serializable {
 		num_commits = pNum_commited;
 	}
 	
+	public VenuesFactory(Parcel source) {
+		venue_id = source.readInt();
+		title = source.readString();
+		address = source.readString();
+		rating =  source.readInt();
+		lat= source.readDouble();
+		lng= source.readDouble();
+		logo =  source.readInt();
+		num_commits= source.readString();
+	}
+
 	public String getTitle(){
 		return title;
 	}
@@ -108,4 +114,36 @@ public class VenuesFactory implements Serializable {
 	public String getNumCommits(){
 		return num_commits;
 	}
+
+	@Override
+	public int describeContents() {
+		return 0;
+	}
+
+	@Override
+	public void writeToParcel(Parcel dest, int flags) {
+		
+		dest.writeInt(venue_id);
+		dest.writeString(title);
+		dest.writeString(address);
+		dest.writeInt(rating);
+		dest.writeDouble(lat);
+		dest.writeDouble(lng);
+		dest.writeInt(logo);
+		dest.writeString(num_commits);
+	}
+	
+	 public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {
+
+		@Override
+		public VenuesFactory createFromParcel(Parcel source) {
+			return new VenuesFactory(source);
+		}
+
+		@Override
+		public VenuesFactory[] newArray(int size) {
+			return new VenuesFactory[size];
+		}
+		
+	};
 }
