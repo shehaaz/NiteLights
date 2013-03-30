@@ -7,6 +7,7 @@ Android App to find events in the city of Montreal
 Dev. Notes:
 
 put num. commits instead of address in venue list
+
 add ranking tab and sort the venue according to attendance 
 
 *Use Polymorphism to make specific Wire Stories*
@@ -14,6 +15,7 @@ add ranking tab and sort the venue according to attendance
 AttendanceStory extends WireFactory{
 toString(){sysout(Name + "is Committed to" + Venue );}
 }
+
 FriendshipStory extends WireFactory {
 toString(){sysout(Name "is Friends with" Name);}
 }
