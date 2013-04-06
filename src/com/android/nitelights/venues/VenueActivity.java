@@ -33,6 +33,7 @@ public class VenueActivity extends Activity {
 		TextView venue_address = (TextView) findViewById(R.id.activity_venue_address);
 		TextView venue_commits = (TextView) findViewById(R.id.venue_num_commits);
 		ImageView venue_rating = (ImageView) findViewById(R.id.venue_activity_rating);
+		ImageView venue_logo = (ImageView) findViewById(R.id.venue_main_logo);
 
 		Bundle bundle = getIntent().getExtras();
 		venue = (VenuesFactory)bundle.getParcelable("THE_VENUE");
@@ -42,6 +43,7 @@ public class VenueActivity extends Activity {
 		venue_address.setText(venue.getAddress());
 		venue_commits.setText("Attendance: "+venue.getNumCommits());
 		venue_rating.setImageResource(venue.getRating());
+		venue_logo.setImageBitmap(venue.getLogo());
 		
 		ListenToButtons();
 

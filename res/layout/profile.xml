@@ -5,6 +5,35 @@
     android:background="#ffffff"
     android:orientation="vertical"
     android:paddingTop="10dip" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dip" >
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/profileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profilePicture"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="65dp"
+        android:gravity="center"
+        android:text="@string/profile_name"
+        android:textColor="#000000" />
+
+    <ImageView
+        android:id="@+id/profilePicture"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:contentDescription="@string/profile_picture"
+        android:src="@drawable/profile_picture" />
+
     <Button
         android:id="@+id/buttonSignOut"
         android:layout_width="wrap_content"
@@ -15,20 +44,5 @@
         android:layout_marginRight="16dp"
         android:gravity="center"
         android:text="@string/logout" />
-
-    <TextView
-        android:id="@+id/profileName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="22dp"
-        android:background="@drawable/fantasy_banner_original"
-        android:gravity="center"
-        android:padding="3dip"
-        android:text="@string/profile_name"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#ffffff"
-        android:textStyle="bold" />
 
 </RelativeLayout>

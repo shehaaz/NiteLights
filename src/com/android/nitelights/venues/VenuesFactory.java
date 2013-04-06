@@ -1,7 +1,16 @@
 package com.android.nitelights.venues;
 
+import java.io.InputStream;
+
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.os.AsyncTask;
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.util.Log;
+import android.widget.ImageView;
+
 
 import com.android.nitelights.R;
 
@@ -18,10 +27,11 @@ public class VenuesFactory implements Parcelable  {
 	private int rating;
 	private double lat;
 	private double lng;
-	private int logo;
+	private Bitmap logo;
+	
 	private String num_commits;
 	
-	public VenuesFactory(int pVenue_id,String pTitle, String pAddress, int pRating, double plat, double pLng, String pNum_commited, int pLogo){
+	public VenuesFactory(int pVenue_id,String pTitle, String pAddress, int pRating, double plat, double pLng, String pNum_commited, String pLogoURL){
 		super();
 		
 		title = pTitle;
@@ -29,9 +39,12 @@ public class VenuesFactory implements Parcelable  {
 		rating = pRating;
 		lat = plat;
 		lng = pLng;
-		logo = pLogo;
 		venue_id = pVenue_id;
 		num_commits = pNum_commited;
+		
+		new DownloadImageTask().execute("http://niteflow.com/sites/default/files/styles/medium/public"+pLogoURL);
+		
+		
 	}
 	
 	public VenuesFactory(Parcel source) {
@@ -41,7 +54,7 @@ public class VenuesFactory implements Parcelable  {
 		rating =  source.readInt();
 		lat= source.readDouble();
 		lng= source.readDouble();
-		logo =  source.readInt();
+		logo = source.readParcelable(VenuesFactory.class.getClassLoader());
 		num_commits= source.readString();
 	}
 
@@ -99,11 +112,11 @@ public class VenuesFactory implements Parcelable  {
 		return lng;
 	}
 	
-	public int getLogo(){
+	public Bitmap getLogo(){
 		return logo;
 	}
 	
-	public void setLogo(int pLogo){
+	public void setLogo(Bitmap pLogo){
 		logo = pLogo;
 	}
 	
@@ -129,7 +142,7 @@ public class VenuesFactory implements Parcelable  {
 		dest.writeInt(rating);
 		dest.writeDouble(lat);
 		dest.writeDouble(lng);
-		dest.writeInt(logo);
+		dest.writeParcelable(logo, flags);
 		dest.writeString(num_commits);
 	}
 	
@@ -146,4 +159,26 @@ public class VenuesFactory implements Parcelable  {
 		}
 		
 	};
+	
+	private class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
+		
+
+
+		protected Bitmap doInBackground(String... urls) {
+			String urldisplay = urls[0];
+			Bitmap mIcon11 = null;
+			try {
+				InputStream in = new java.net.URL(urldisplay).openStream();
+				mIcon11 = BitmapFactory.decodeStream(in);
+			} catch (Exception e) {
+				Log.e("Error", e.getMessage());
+				e.printStackTrace();
+			}
+			return mIcon11;
+		}
+
+		protected void onPostExecute(Bitmap result) {
+			logo = result;
+		}
+	}
 }

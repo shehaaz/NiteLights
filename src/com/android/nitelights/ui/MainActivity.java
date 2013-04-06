@@ -35,12 +35,12 @@ import com.android.nitelights.wire.WireFactory;
 public class MainActivity extends FragmentActivity implements ActionBar.TabListener {
 
 	static AppSectionsPagerAdapter mAppSectionsPagerAdapter;
-	public static VenuesFactory venue_data[] = {new VenuesFactory(1,"Test Venue","test address",100,40.88,50.99,"1000",R.drawable.letter_v)};
+	public static VenuesFactory venue_data[];
 	public static WireFactory wire_data[] = {new WireFactory("name","venue")};
-	public static ProfileFactory user_data = new ProfileFactory("DudeMan");
+	public static ProfileFactory user_data;
 	private String url_all_venues = "http://niteflow.com/AndroidDB/get_all_venues.php";
 	private String url_all_wire_data = "http://niteflow.com/AndroidDB/get_user_wire_data.php";
-	private String url_user_data = "http://niteflow.com/AndroidDB/get_user_name_from_uid.php";
+	private String url_user_data = "http://niteflow.com/AndroidDB/get_user_info_from_uid.php";
 	static ViewPager mViewPager;
 	public static String committedVenue;
 	private ProgressDialog pDialog;
@@ -57,7 +57,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 
 		//Initialize Dialog and Start Web Service
 		initializeDialog();
-//		startWebService();
+		startWebService();
 		
 
 		final ActionBar actionBar = getActionBar();
@@ -74,11 +74,6 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 			}
 		});
 
-		//setting dummy data
-		setVenues(venue_data);
-		setWire(wire_data);
-		setUser(user_data);
-		setAdapter();
 		
 		//naming the tabs of the ActionBar
 		actionBar.addTab(actionBar.newTab()

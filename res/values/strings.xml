@@ -8,8 +8,7 @@
     <string name="demo_collection">Demo Collection</string>
     <string name="demo_external_activity"> Demo External Activity</string>
     <string name="dummy_section_text">Section %1d is just a dummy section</string>
-    <string name="profile_name">firstName</string>
-    <string name="profile_last_name">lastName</string>
+    <string name="profile_name">profileName</string>
     <string name="profile_picture">profile picture</string>
     <string name="logout">logout</string>
     <string name="title_the_wire">The Wire</string>

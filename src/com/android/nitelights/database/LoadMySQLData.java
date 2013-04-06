@@ -33,17 +33,23 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 
 	//Data
 	private String uid;
+	
 	private int venue_id;
 	private String title;
 	private String address;
-	private String wire_name;
-	private String wire_title;
-	private String wire_timestamp;
 	private double venue_lng;
 	private double venue_lat; 
 	private String number_commited; 
 	private int rating;
+	private int venue_logo;
+	private String venue_photo;
+	
+	private String wire_name;
+	private String wire_title;
+	private String wire_timestamp;
+	
 	private String user_name;
+	private String user_photo;
 	
 	//service URLs
 	private String serviceVenues;
@@ -99,8 +105,11 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 					venue_lat = Double.parseDouble(venues.getJSONObject(i).getString("field_geo_lat"));
 					number_commited = venues.getJSONObject(i).getString("Number_Commited");
 					rating = Integer.parseInt(venues.getJSONObject(i).getString("Rating"));
+					String venue_photo_raw =  venues.getJSONObject(i).getString("logo");
+					venue_photo = venue_photo_raw.substring(8);
+					
 
-					data[i] = new VenuesFactory(venue_id,title,address,rating,venue_lat,venue_lng,number_commited,R.drawable.letter_v);
+					data[i] = new VenuesFactory(venue_id,title,address,rating,venue_lat,venue_lng,number_commited,venue_photo);
 
 				}
 			}
@@ -169,7 +178,8 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 				// looping through All Products
 				for (int i = 0; i < user.length(); i++) {
 					user_name = user.getJSONObject(i).getString("name");
-					user_data = new ProfileFactory(user_name);
+					user_photo = user.getJSONObject(i).getString("picture_url");
+					user_data = new ProfileFactory(user_name, user_photo);
 				}
 			}
 		} catch (JSONException e) {

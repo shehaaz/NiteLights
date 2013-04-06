@@ -222,11 +222,11 @@ containing a value of this type.
         public static final int venue_page_open_map_button=0x7f020031;
     }
     public static final class id {
-        public static final int activity_venue_address=0x7f050017;
+        public static final int activity_venue_address=0x7f050016;
         public static final int activity_venue_title=0x7f050014;
         public static final int buttonCancel=0x7f05000d;
         public static final int buttonOk=0x7f05000c;
-        public static final int buttonSignOut=0x7f050021;
+        public static final int buttonSignOut=0x7f050024;
         public static final int checkRemember=0x7f05000a;
         public static final int editPassword=0x7f050009;
         public static final int editUsername=0x7f050007;
@@ -235,13 +235,15 @@ containing a value of this type.
         public static final int linearLayout1=0x7f05000b;
         public static final int listitem_venue_icon=0x7f05001a;
         public static final int map=0x7f05000f;
-        public static final int menu_map=0x7f050023;
-        public static final int menu_settings=0x7f050024;
+        public static final int menu_map=0x7f050025;
+        public static final int menu_settings=0x7f050026;
         public static final int none=0x7f050000;
         public static final int normal=0x7f050001;
         public static final int pager=0x7f05000e;
         public static final int person_wire_name=0x7f05001f;
         public static final int profileName=0x7f050022;
+        public static final int profilePicture=0x7f050023;
+        public static final int relativeLayout1=0x7f050021;
         public static final int satellite=0x7f050002;
         public static final int tableLayout1=0x7f05001e;
         public static final int terrain=0x7f050003;
@@ -252,10 +254,10 @@ containing a value of this type.
         public static final int title_venue=0x7f05001b;
         public static final int title_venue_address=0x7f05001d;
         public static final int venue_activity_rating=0x7f050015;
+        public static final int venue_main_logo=0x7f050018;
         public static final int venue_num_commits=0x7f050012;
-        public static final int venue_page_open_map_button=0x7f050018;
+        public static final int venue_page_open_map_button=0x7f050017;
         public static final int venue_wire_title=0x7f050020;
-        public static final int widget39=0x7f050016;
         public static final int widget46=0x7f050011;
         public static final int widget47=0x7f050013;
         public static final int widget48=0x7f050010;
@@ -285,7 +287,7 @@ containing a value of this type.
         public static final int venues=0x7f040000;
     }
     public static final class string {
-        public static final int all_venues=0x7f060028;
+        public static final int all_venues=0x7f060027;
         public static final int app_name=0x7f060011;
         /**   Title for notification shown when GooglePlayServices is unavailable [CHAR LIMIT=70] 
          */
@@ -296,7 +298,7 @@ containing a value of this type.
         /**   Requested by string saying which app requested the notification. [CHAR LIMIT=42] 
          */
         public static final int auth_client_requested_by_msg=0x7f060010;
-        public static final int committed_to=0x7f060026;
+        public static final int committed_to=0x7f060025;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=40] 
@@ -354,25 +356,24 @@ containing a value of this type.
         public static final int demo_external_activity=0x7f060016;
         public static final int dummy_section_text=0x7f060017;
         public static final int hello_world=0x7f060012;
-        public static final int logout=0x7f06001b;
+        public static final int logout=0x7f06001a;
         public static final int menu_settings=0x7f060013;
-        public static final int open_map=0x7f060025;
-        public static final int person_name=0x7f060027;
-        public static final int profile_last_name=0x7f060019;
+        public static final int open_map=0x7f060024;
+        public static final int person_name=0x7f060026;
         public static final int profile_name=0x7f060018;
-        public static final int profile_picture=0x7f06001a;
+        public static final int profile_picture=0x7f060019;
         public static final int title_activity_collection_demo=0x7f060014;
-        public static final int title_activity_login=0x7f06002a;
-        public static final int title_activity_map=0x7f060024;
-        public static final int title_activity_venue=0x7f060029;
-        public static final int title_map=0x7f06001f;
-        public static final int title_profile=0x7f06001d;
-        public static final int title_the_wire=0x7f06001c;
-        public static final int title_venue=0x7f060021;
-        public static final int title_venue_address=0x7f060020;
-        public static final int title_venue_num_commits=0x7f060023;
-        public static final int title_venue_rating=0x7f060022;
-        public static final int title_venues=0x7f06001e;
+        public static final int title_activity_login=0x7f060029;
+        public static final int title_activity_map=0x7f060023;
+        public static final int title_activity_venue=0x7f060028;
+        public static final int title_map=0x7f06001e;
+        public static final int title_profile=0x7f06001c;
+        public static final int title_the_wire=0x7f06001b;
+        public static final int title_venue=0x7f060020;
+        public static final int title_venue_address=0x7f06001f;
+        public static final int title_venue_num_commits=0x7f060022;
+        public static final int title_venue_rating=0x7f060021;
+        public static final int title_venues=0x7f06001d;
     }
     public static final class style {
         /** 

@@ -111,7 +111,7 @@ public class LoginActivity extends Activity {
 			protected String doInBackground(Void... params) {
 				try {
 //					uid = DrupalConnect.getInstance().login(username, password);
-					uid= "110";
+					uid= "1";
 					return "OK";
 				}
 				catch (Exception ex) {

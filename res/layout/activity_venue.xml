@@ -52,15 +52,6 @@
     android:layout_marginBottom="16dp"
     android:src="@drawable/five_star" />
 
-<ImageView
-    android:id="@+id/widget39"
-    android:layout_width="wrap_content"
-    android:layout_height="80dp"
-    android:layout_alignLeft="@+id/venue_activity_rating"
-    android:layout_alignParentTop="true"
-    android:scaleType="fitCenter"
-    android:src="@drawable/letter_v_large" />
-
 <TextView
     android:id="@+id/activity_venue_address"
     android:layout_width="fill_parent"
@@ -78,6 +69,15 @@
     android:layout_alignLeft="@+id/venue_activity_rating"
     android:layout_below="@+id/widget46"
     android:src="@drawable/venue_map_icon" />
+
+<ImageView
+    android:id="@+id/venue_main_logo"
+    android:layout_width="100dp"
+    android:layout_height="90dp"
+    android:layout_alignLeft="@+id/venue_activity_rating"
+    android:layout_alignParentTop="true"
+    android:scaleType="fitCenter"
+    android:src="@drawable/letter_v_large" />
 
 </RelativeLayout>
 
