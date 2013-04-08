@@ -1,4 +1,4 @@
 NiteLights
 ==========
 
-School Project: Android App to find events in the city of Montreal
+Android App to find venues in the city of Montreal
