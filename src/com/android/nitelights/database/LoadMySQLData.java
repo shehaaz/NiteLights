@@ -1,6 +1,7 @@
 package com.android.nitelights.database;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.apache.http.NameValuePair;
@@ -25,6 +26,8 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 
 	VenuesFactory data[];
 	WireFactory wire_data[];
+	WireFactory wire_friends[];
+	WireFactory wire_venues[];
 	ProfileFactory user_data;
 	
 	JSONParser jParser = new JSONParser();
@@ -41,7 +44,6 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 	private double venue_lat; 
 	private String number_commited; 
 	private int rating;
-	private int venue_logo;
 	private String venue_photo;
 	
 	private String wire_name;
@@ -55,6 +57,7 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 	private String serviceVenues;
 	private String serviceWire;
 	private String serviceUser;
+	private String serviceWireFriendship;
 
 	/**
 	 * Before starting background thread Show Progress Dialog
@@ -74,6 +77,7 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 		serviceWire = (String) args[2];
 		uid = (String) args[3];
 		serviceUser = (String) args[4];
+		serviceWireFriendship = (String) args[5];
 
 /**************************************************GET VENUES*****************************************************************************************/
 		// Building Parameters
@@ -116,7 +120,7 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
-/**************************************************GET WIRE*****************************************************************************************/
+/**************************************************GET WIRE Committed Venue*****************************************************************************************/
 		// Building Parameters
 		List<NameValuePair> wire_params = new ArrayList<NameValuePair>();
 		wire_params.add(new BasicNameValuePair("uid", uid)); //entering as USER_Id = 1
@@ -125,7 +129,7 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 		JSONObject jObject_Wire = jParser.makeHttpRequest(serviceWire, "GET", wire_params);
 
 		// Check your log cat for JSON reponse
-		Log.d("All Wire_data: ", jObject_Wire.toString());
+		Log.d("All Wire_venue_data: ", jObject_Wire.toString());
 
 		try {
 			// Checking for SUCCESS TAG
@@ -135,7 +139,7 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 				// products found
 				// Getting Array of venues
 				JSONArray wire = jObject_Wire.getJSONArray("wire");
-				wire_data = new WireFactory[wire.length()];
+				wire_venues = new WireFactory[wire.length()];
 
 				// looping through All Products
 				for (int i = 0; i < wire.length(); i++) {
@@ -144,15 +148,58 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 					wire_name = wire.getJSONObject(i).getString("name");
 					wire_title = wire.getJSONObject(i).getString("title");
 					wire_timestamp = wire.getJSONObject(i).getString("timestamp");
-					wire_data[i] = new WireFactory(wire_name,wire_title,wire_timestamp);
+					wire_venues[i] = new WireFactory(wire_name,wire_title,"Committed To",wire_timestamp);
 				}
 			}
 			else{
-				wire_data = new WireFactory[] {new WireFactory("No One","   Any Venues",null)};
+				wire_venues = new WireFactory[] {new WireFactory("","","No Activity",null)};
 			}
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
+		
+/**************************************************GET WIRE Friendship data*****************************************************************************************/
+		// Building Parameters
+		List<NameValuePair> Friendship_params = new ArrayList<NameValuePair>();
+		Friendship_params.add(new BasicNameValuePair("uid", uid)); //entering as USER_Id = 1
+
+		// getting JSON string from URL
+		JSONObject jObject_WireFriendship = jParser.makeHttpRequest(serviceWireFriendship, "GET", Friendship_params);
+
+		// Check your log cat for JSON reponse
+		Log.d("All Wire_Friend_Data: ", jObject_WireFriendship.toString());
+
+		try {
+			// Checking for SUCCESS TAG
+			int success = jObject_WireFriendship.getInt("success");
+
+			if (success == 1) {
+				// products found
+				// Getting Array of venues
+				JSONArray wire_friendship = jObject_WireFriendship.getJSONArray("wire");
+				wire_friends = new WireFactory[wire_friendship.length()];
+
+				// looping through All Products
+				for (int i = 0; i < wire_friendship.length(); i++) {
+
+
+					String friend_name = wire_friendship.getJSONObject(i).getString("name");
+					
+					String wire_variables_raw = wire_friendship.getJSONObject(i).getString("variables");
+					
+					String firstDelims = "[><]";
+					String[] Tokens = wire_variables_raw.split(firstDelims);
+				
+					wire_timestamp = wire_friendship.getJSONObject(i).getString("timestamp");
+					wire_friends[i] = new WireFactory(Tokens[2],Tokens[6],"is Friends With",wire_timestamp);
+				}
+			}
+			else{
+				wire_friends = new WireFactory[] {new WireFactory("","","No Activity",null)};
+			}
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}		
 
 /**************************************************GET USER*****************************************************************************************/
 		// Building Parameters
@@ -185,7 +232,7 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
-		
+				
 		return null;
 	}
 
@@ -193,6 +240,18 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 	 * After completing background task Dismiss the progress dialog
 	 * **/
 	protected void onPostExecute(String result) {
+		
+		//Copy venues and Friends data into wire
+		int wire_venuesLen = wire_venues.length;
+		int wire_friendsLen = wire_friends.length;
+		wire_data = new WireFactory[wire_venuesLen + wire_friendsLen];
+		System.arraycopy(wire_friends, 0, wire_data, 0, wire_friendsLen);
+		System.arraycopy(wire_venues, 0, wire_data, wire_friendsLen, wire_venuesLen);
+		
+		//According to Decending Timestamp value
+		Arrays.sort(wire_data);
+
+				
 		callerActivity.setVenues(data);
 		callerActivity.setWire(wire_data);
 		callerActivity.setUser(user_data);

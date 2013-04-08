@@ -226,24 +226,25 @@ containing a value of this type.
         public static final int activity_venue_title=0x7f050014;
         public static final int buttonCancel=0x7f05000d;
         public static final int buttonOk=0x7f05000c;
-        public static final int buttonSignOut=0x7f050024;
+        public static final int buttonSignOut=0x7f050025;
         public static final int checkRemember=0x7f05000a;
         public static final int editPassword=0x7f050009;
         public static final int editUsername=0x7f050007;
+        public static final int element1=0x7f05001f;
+        public static final int element2=0x7f050021;
         public static final int hybrid=0x7f050004;
         public static final int imageView1=0x7f05001c;
         public static final int linearLayout1=0x7f05000b;
         public static final int listitem_venue_icon=0x7f05001a;
         public static final int map=0x7f05000f;
-        public static final int menu_map=0x7f050025;
-        public static final int menu_settings=0x7f050026;
+        public static final int menu_map=0x7f050026;
+        public static final int menu_settings=0x7f050027;
         public static final int none=0x7f050000;
         public static final int normal=0x7f050001;
         public static final int pager=0x7f05000e;
-        public static final int person_wire_name=0x7f05001f;
-        public static final int profileName=0x7f050022;
-        public static final int profilePicture=0x7f050023;
-        public static final int relativeLayout1=0x7f050021;
+        public static final int profileName=0x7f050023;
+        public static final int profilePicture=0x7f050024;
+        public static final int relativeLayout1=0x7f050022;
         public static final int satellite=0x7f050002;
         public static final int tableLayout1=0x7f05001e;
         public static final int terrain=0x7f050003;
@@ -257,10 +258,10 @@ containing a value of this type.
         public static final int venue_main_logo=0x7f050018;
         public static final int venue_num_commits=0x7f050012;
         public static final int venue_page_open_map_button=0x7f050017;
-        public static final int venue_wire_title=0x7f050020;
         public static final int widget46=0x7f050011;
         public static final int widget47=0x7f050013;
         public static final int widget48=0x7f050010;
+        public static final int wiretype=0x7f050020;
     }
     public static final class layout {
         public static final int activity_login=0x7f030000;

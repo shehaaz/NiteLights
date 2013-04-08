@@ -37,9 +37,10 @@ public class WireAdapter extends ArrayAdapter<WireFactory> {
 			row = inflater.inflate(layoutResourceId, parent, false);
 
 			holder = new WireHolder();
-			holder.venueTitle = (TextView) row.findViewById(R.id.venue_wire_title);
-			holder.personName = (TextView) row.findViewById(R.id.person_wire_name);
-
+			holder.element1 = (TextView) row.findViewById(R.id.element1);
+			holder.element2 = (TextView) row.findViewById(R.id.element2);
+			holder.wiretype = (TextView) row.findViewById(R.id.wiretype);
+			
 			row.setTag(holder);
 		}
 		else{
@@ -47,14 +48,16 @@ public class WireAdapter extends ArrayAdapter<WireFactory> {
 		}
 		//For every item in the list. set Title, address and rating
 		WireFactory wire = wireFactory[position];
-		holder.personName.setText(wire.getName());
-		holder.venueTitle.setText(wire.getVenueTitle());
+		holder.element1.setText(wire.getElement1());
+		holder.element2.setText(wire.getElement2());
+		holder.wiretype.setText(wire.getWireType());
 
 		return row;
 	}
 
 	static class WireHolder{
-		TextView venueTitle;
-		TextView personName;
+		TextView element1;
+		TextView element2;
+		TextView wiretype;
 	}
 }

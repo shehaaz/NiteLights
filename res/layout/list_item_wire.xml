@@ -8,7 +8,7 @@
     <TableRow>
 
         <TextView
-            android:id="@+id/person_wire_name"
+            android:id="@+id/element1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="4dip"
@@ -22,6 +22,7 @@
     </TableRow>
 
     <TextView
+        android:id="@+id/wiretype"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingBottom="6dip"
@@ -30,7 +31,7 @@
         android:textSize="12sp" />
 
     <TextView
-        android:id="@+id/venue_wire_title"
+        android:id="@+id/element2"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-condensed"
