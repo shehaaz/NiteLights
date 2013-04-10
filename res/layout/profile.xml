@@ -22,7 +22,10 @@
         android:layout_marginTop="65dp"
         android:gravity="center"
         android:text="@string/profile_name"
-        android:textColor="#000000" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"
+        android:textStyle="bold" 
+        android:textSize="30sp"/>
 
     <ImageView
         android:id="@+id/profilePicture"
