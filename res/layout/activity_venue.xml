@@ -12,14 +12,6 @@
 	android:orientation="vertical"
 	android:layout_centerVertical="true"
 	android:layout_centerHorizontal="true">
-<TextView
-	android:id="@+id/venue_num_commits"
-	android:layout_width="wrap_content"
-	android:layout_height="wrap_content"
-	android:text="@string/title_venue_num_commits" 
-	android:textColor="#ffffff"
-	android:typeface="sans"
-    android:textSize="40sp"/>
 </LinearLayout>
 
 <LinearLayout
@@ -40,17 +32,8 @@
     android:layout_marginBottom="18dp"
     android:text="@string/title_venue"
     android:textColor="#ffffff"
-    android:textSize="20sp"
+    android:textSize="30sp"
     android:textStyle="bold" />
-
-<ImageView
-    android:id="@+id/venue_activity_rating"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_above="@+id/widget46"
-    android:layout_centerHorizontal="true"
-    android:layout_marginBottom="16dp"
-    android:src="@drawable/five_star" />
 
 <TextView
     android:id="@+id/activity_venue_address"
@@ -60,24 +43,46 @@
     android:layout_centerHorizontal="true"
     android:gravity="center"
     android:text="@string/title_venue_address"
+     android:textSize="20sp"
     android:textColor="#ffffff" />
 
 <ImageView
     android:id="@+id/venue_page_open_map_button"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_alignLeft="@+id/venue_activity_rating"
-    android:layout_below="@+id/widget46"
+    android:layout_alignParentBottom="true"
+    android:layout_alignRight="@+id/venue_activity_rating"
+    android:layout_marginBottom="17dp"
     android:src="@drawable/venue_map_icon" />
+
+<TextView
+    android:id="@+id/venue_num_commits"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/venue_page_open_map_button"
+    android:layout_centerHorizontal="true"
+    android:text="@string/title_venue_num_commits"
+    android:textColor="#ffffff"
+    android:textSize="40sp"
+    android:typeface="sans" />
 
 <ImageView
     android:id="@+id/venue_main_logo"
-    android:layout_width="100dp"
-    android:layout_height="90dp"
-    android:layout_alignLeft="@+id/venue_activity_rating"
+    android:layout_width="300dp"
+    android:layout_height="175dp"
     android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
     android:scaleType="fitCenter"
+    android:paddingTop="30dp"
     android:src="@drawable/letter_v_large" />
+
+<ImageView
+    android:id="@+id/venue_activity_rating"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/venue_num_commits"
+    android:layout_centerHorizontal="true"
+    android:src="@drawable/five_star" />
 
 </RelativeLayout>
 

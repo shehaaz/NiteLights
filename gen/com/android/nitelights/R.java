@@ -223,8 +223,8 @@ containing a value of this type.
         public static final int venue_page_open_map_button=0x7f020032;
     }
     public static final class id {
-        public static final int activity_venue_address=0x7f050016;
-        public static final int activity_venue_title=0x7f050014;
+        public static final int activity_venue_address=0x7f050015;
+        public static final int activity_venue_title=0x7f050013;
         public static final int buttonCancel=0x7f05000d;
         public static final int buttonOk=0x7f05000c;
         public static final int buttonSignOut=0x7f050025;
@@ -255,12 +255,12 @@ containing a value of this type.
         public static final int thumbnail=0x7f050019;
         public static final int title_venue=0x7f05001b;
         public static final int title_venue_address=0x7f05001d;
-        public static final int venue_activity_rating=0x7f050015;
+        public static final int venue_activity_rating=0x7f050014;
         public static final int venue_main_logo=0x7f050018;
-        public static final int venue_num_commits=0x7f050012;
-        public static final int venue_page_open_map_button=0x7f050017;
+        public static final int venue_num_commits=0x7f050017;
+        public static final int venue_page_open_map_button=0x7f050016;
         public static final int widget46=0x7f050011;
-        public static final int widget47=0x7f050013;
+        public static final int widget47=0x7f050012;
         public static final int widget48=0x7f050010;
         public static final int wiretype=0x7f050020;
     }
