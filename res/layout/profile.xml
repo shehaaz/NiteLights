@@ -25,17 +25,17 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#000000"
         android:textStyle="bold" 
-        android:textSize="30sp"/>
+        android:textSize="37sp"/>
 
     <ImageView
         android:id="@+id/profilePicture"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
         android:layout_below="@+id/relativeLayout1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="10dp"
         android:contentDescription="@string/profile_picture"
-        android:src="@drawable/profile_picture" />
+        android:src="@drawable/default_photo" />
 
     <Button
         android:id="@+id/buttonSignOut"
