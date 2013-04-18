@@ -6,11 +6,13 @@ public class ProfileFactory {
 	String lastName;
 	String name;
 	String picture;
+	String picture_id;
 
-	public ProfileFactory(String pName, String pictureUrl){
+	public ProfileFactory(String pName, String pictureUrl, String photoID){
 
 		name = pName;
 		picture = "http://niteflow.com/sites/default/files/pictures/"+pictureUrl;
+		picture_id = photoID;
 	}
 
 	public String getName(){
@@ -18,6 +20,11 @@ public class ProfileFactory {
 	}
 	
 	public String getProfilePhoto(){
+		System.out.println(picture);
 		return picture;
+	}
+	
+	public String getPhotoID(){
+		return picture_id;
 	}
 }

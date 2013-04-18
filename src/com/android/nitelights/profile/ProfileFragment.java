@@ -38,11 +38,15 @@ public class ProfileFragment extends Fragment{
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
 		View rootView = inflater.inflate(R.layout.profile,container, false);
 
+		
+		
 		TextView name = (TextView) rootView.findViewById(R.id.profileName);
 		name.setText(user.getName());
 
+		if(!user.getPhotoID().equals("0")){
 		new DownloadImageTask((ImageView) rootView.findViewById(R.id.profilePicture))
 		.execute(user.getProfilePhoto());
+		}
 
 		Button logoutButton = (Button) rootView.findViewById(R.id.buttonSignOut);
 

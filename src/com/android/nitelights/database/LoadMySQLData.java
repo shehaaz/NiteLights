@@ -52,6 +52,7 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 	
 	private String user_name;
 	private String user_photo;
+	private String user_photo_id;
 	
 	//service URLs
 	private String serviceVenues;
@@ -87,7 +88,7 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 		JSONObject jObject_Venues = jParser.makeHttpRequest(serviceVenues, "GET", venue_params);
 
 		// Check your log cat for JSON reponse
-		Log.d("All Venues: ", jObject_Venues.toString());
+//		Log.d("All Venues: ", jObject_Venues.toString());
 
 		try {
 			// Checking for SUCCESS TAG
@@ -129,7 +130,7 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 		JSONObject jObject_Wire = jParser.makeHttpRequest(serviceWire, "GET", wire_params);
 
 		// Check your log cat for JSON reponse
-		Log.d("All Wire_venue_data: ", jObject_Wire.toString());
+//		Log.d("All Wire_venue_data: ", jObject_Wire.toString());
 
 		try {
 			// Checking for SUCCESS TAG
@@ -152,7 +153,7 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 				}
 			}
 			else{
-				wire_venues = new WireFactory[] {new WireFactory("","","No Activity",null)};
+				wire_venues = new WireFactory[] {new WireFactory("","","No Activity","0")};
 			}
 		} catch (JSONException e) {
 			e.printStackTrace();
@@ -167,7 +168,7 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 		JSONObject jObject_WireFriendship = jParser.makeHttpRequest(serviceWireFriendship, "GET", Friendship_params);
 
 		// Check your log cat for JSON reponse
-		Log.d("All Wire_Friend_Data: ", jObject_WireFriendship.toString());
+//		Log.d("All Wire_Friend_Data: ", jObject_WireFriendship.toString());
 
 		try {
 			// Checking for SUCCESS TAG
@@ -210,7 +211,7 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 		JSONObject jObject_User = jParser.makeHttpRequest(serviceUser, "GET", user_params);
 
 		// Check your log cat for JSON reponse
-		Log.d("All User_data: ", jObject_User.toString());
+//		Log.d("All User_data: ", jObject_User.toString());
 
 		try {
 			// Checking for SUCCESS TAG
@@ -226,7 +227,8 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 				for (int i = 0; i < user.length(); i++) {
 					user_name = user.getJSONObject(i).getString("name");
 					user_photo = user.getJSONObject(i).getString("picture_url");
-					user_data = new ProfileFactory(user_name, user_photo);
+					user_photo_id = user.getJSONObject(i).getString("picture_id");
+					user_data = new ProfileFactory(user_name, user_photo, user_photo_id);
 				}
 			}
 		} catch (JSONException e) {
