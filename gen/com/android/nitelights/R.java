@@ -227,7 +227,7 @@ containing a value of this type.
         public static final int activity_venue_title=0x7f050013;
         public static final int buttonCancel=0x7f05000d;
         public static final int buttonOk=0x7f05000c;
-        public static final int buttonSignOut=0x7f050025;
+        public static final int buttonSignOut=0x7f050024;
         public static final int checkRemember=0x7f05000a;
         public static final int editPassword=0x7f050009;
         public static final int editUsername=0x7f050007;
@@ -238,13 +238,14 @@ containing a value of this type.
         public static final int linearLayout1=0x7f05000b;
         public static final int listitem_venue_icon=0x7f05001a;
         public static final int map=0x7f05000f;
-        public static final int menu_map=0x7f050026;
-        public static final int menu_settings=0x7f050027;
+        public static final int menu_map=0x7f050027;
+        public static final int menu_settings=0x7f050028;
         public static final int none=0x7f050000;
         public static final int normal=0x7f050001;
         public static final int pager=0x7f05000e;
-        public static final int profileName=0x7f050023;
-        public static final int profilePicture=0x7f050024;
+        public static final int profileCommit=0x7f050025;
+        public static final int profileName=0x7f050026;
+        public static final int profilePicture=0x7f050023;
         public static final int relativeLayout1=0x7f050022;
         public static final int satellite=0x7f050002;
         public static final int tableLayout1=0x7f05001e;
@@ -301,6 +302,7 @@ containing a value of this type.
          */
         public static final int auth_client_requested_by_msg=0x7f060010;
         public static final int committed_to=0x7f060025;
+        public static final int committed_venue=0x7f06002b;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=40] 
@@ -362,6 +364,7 @@ containing a value of this type.
         public static final int menu_settings=0x7f060013;
         public static final int open_map=0x7f060024;
         public static final int person_name=0x7f060026;
+        public static final int profile_commit=0x7f06002a;
         public static final int profile_name=0x7f060018;
         public static final int profile_picture=0x7f060019;
         public static final int title_activity_collection_demo=0x7f060014;

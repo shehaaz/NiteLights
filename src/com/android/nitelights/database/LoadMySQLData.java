@@ -53,6 +53,9 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 	private String user_name;
 	private String user_photo;
 	private String user_photo_id;
+	private String serviceUserCommit;
+	private String num_venues;
+	private String user_venue_commit;
 	
 	//service URLs
 	private String serviceVenues;
@@ -79,6 +82,7 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 		uid = (String) args[3];
 		serviceUser = (String) args[4];
 		serviceWireFriendship = (String) args[5];
+		serviceUserCommit = (String) args[6];
 
 /**************************************************GET VENUES*****************************************************************************************/
 		// Building Parameters
@@ -234,7 +238,35 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
+			
+/**************************************************GET Committed venue*****************************************************************************************/
+		// Building Parameters
+		List<NameValuePair> user_commit_params = new ArrayList<NameValuePair>();
+		user_commit_params.add(new BasicNameValuePair("uid", uid)); //entering as USER_Id = 1
+
+		// getting JSON string from URL
+		JSONObject jObject_User_Commit = jParser.makeHttpRequest(serviceUserCommit, "GET", user_commit_params);
+
+
+		try {
+			// Checking for SUCCESS TAG
+			int success = jObject_User_Commit.getInt("success");
+
+			if (success == 1) {
+
+				JSONArray user_commit = jObject_User_Commit.getJSONArray("user_commit");
 				
+
+				// looping through All Products
+				for (int i = 0; i < user_commit.length(); i++) {
+					num_venues = user_commit.getJSONObject(i).getString("total");
+					user_venue_commit = user_commit.getJSONObject(i).getString("committed_venue");
+				}
+			}
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		
 		return null;
 	}
 
@@ -242,6 +274,12 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 	 * After completing background task Dismiss the progress dialog
 	 * **/
 	protected void onPostExecute(String result) {
+		
+		if(!num_venues.equals("0")){
+		user_data.setCommittedVenue(user_venue_commit);
+		} else{
+		 user_data.setCommittedVenue("Y U NO PARTY?");	
+		}
 		
 		//Copy venues and Friends data into wire
 		int wire_venuesLen = wire_venues.length;

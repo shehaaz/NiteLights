@@ -26,5 +26,7 @@
     <string name="all_venues">http://niteflow.com/AndroidDB/get_all_venues.php</string>
     <string name="title_activity_venue">Venue Page</string>
     <string name="title_activity_login">Login</string>
+    <string name="profile_commit">Venue Name</string>
+    <string name="committed_venue">Committed Venue:</string>
 
 </resources>

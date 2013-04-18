@@ -47,6 +47,10 @@ public class ProfileFragment extends Fragment{
 		new DownloadImageTask((ImageView) rootView.findViewById(R.id.profilePicture))
 		.execute(user.getProfilePhoto());
 		}
+		
+		TextView committed_venue = (TextView) rootView.findViewById(R.id.profileCommit);
+		committed_venue.setText(user.getCommittedVenue());
+		
 
 		Button logoutButton = (Button) rootView.findViewById(R.id.buttonSignOut);
 

@@ -42,6 +42,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	private String url_user_wire_data = "http://niteflow.com/AndroidDB/get_user_wire_data.php";
 	private String url_user_data = "http://niteflow.com/AndroidDB/get_user_info_from_uid.php";
 	private String url_user_wire_friendships = "http://niteflow.com/AndroidDB/get_user_wire_friendships.php";
+	private String url_user_committed_venue = "http://niteflow.com/AndroidDB/get_user_commit.php";
 	static ViewPager mViewPager;
 	public static String committedVenue;
 	private ProgressDialog pDialog;
@@ -119,7 +120,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 
 	private void startWebService() {
 		//Load All venues in background thread
-		new LoadMySQLData().execute(this,url_all_venues,url_user_wire_data,uid,url_user_data,url_user_wire_friendships);
+		new LoadMySQLData().execute(this,url_all_venues,url_user_wire_data,uid,url_user_data,url_user_wire_friendships,url_user_committed_venue);
 	}
 
 	public void setVenues(VenuesFactory[] pVenues){
