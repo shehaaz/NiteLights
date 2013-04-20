@@ -157,7 +157,7 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 				}
 			}
 			else{
-				wire_venues = new WireFactory[] {new WireFactory("","","No Activity","0")};
+				wire_venues = new WireFactory[] {new WireFactory("","","No Commit Activity","0")};
 			}
 		} catch (JSONException e) {
 			e.printStackTrace();
@@ -200,7 +200,7 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 				}
 			}
 			else{
-				wire_friends = new WireFactory[] {new WireFactory("","","No Activity",null)};
+				wire_friends = new WireFactory[] {new WireFactory("","","No Friend Activity",null)};
 			}
 		} catch (JSONException e) {
 			e.printStackTrace();

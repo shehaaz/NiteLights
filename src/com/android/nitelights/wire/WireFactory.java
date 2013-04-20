@@ -1,6 +1,7 @@
 package com.android.nitelights.wire;
 
 
+
 public class WireFactory implements Comparable<WireFactory>{
 	
 	private String element1;
@@ -32,14 +33,22 @@ public class WireFactory implements Comparable<WireFactory>{
 	public String getTimestamp(){
 		return wire_timestamp;
 	}
-
+	
 
 	@Override
 	public int compareTo(WireFactory comparedWireObject) {
 		
-		int compareQuantity = Integer.parseInt(((WireFactory) comparedWireObject).getTimestamp()); 
-		  
-		//descending order
-		return compareQuantity - Integer.parseInt(this.getTimestamp());
+		int compareQuantity;
+		
+		if(comparedWireObject.getTimestamp() != null){
+			compareQuantity = Integer.parseInt(((WireFactory) comparedWireObject).getTimestamp()); 
+			//descending order
+			return compareQuantity - Integer.parseInt(this.getTimestamp());
+		}
+		else{
+			compareQuantity = 0;
+			return compareQuantity;
+		}
+		  	
 	}
 }
