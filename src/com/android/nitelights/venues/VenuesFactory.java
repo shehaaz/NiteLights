@@ -17,7 +17,7 @@ import com.android.nitelights.R;
 /**
  * Creates new Venue objects
  */
-public class VenuesFactory implements Parcelable  {
+public class VenuesFactory implements Parcelable, Comparable<VenuesFactory>  {
 	
 
 	
@@ -180,5 +180,14 @@ public class VenuesFactory implements Parcelable  {
 		protected void onPostExecute(Bitmap result) {
 			logo = result;
 		}
+	}
+
+	@Override
+	public int compareTo(VenuesFactory pVenue) {
+		
+		String currVenue = this.getTitle().toUpperCase();
+		String paramVenue = pVenue.getTitle().toUpperCase();
+		return currVenue.compareTo(paramVenue);
+		
 	}
 }

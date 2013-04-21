@@ -24,7 +24,7 @@ import com.android.nitelights.wire.WireFactory;
  * */
 public class LoadMySQLData extends AsyncTask<Object, String, String> {
 
-	VenuesFactory data[];
+	VenuesFactory venue_data[];
 	WireFactory wire_data[];
 	WireFactory wire_friends[];
 	WireFactory wire_venues[];
@@ -102,7 +102,7 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 				// products found
 				// Getting Array of venues
 				JSONArray venues = jObject_Venues.getJSONArray("venues");
-				data = new VenuesFactory[venues.length()];
+				venue_data = new VenuesFactory[venues.length()];
 
 				// looping through All Products
 				for (int i = 0; i < venues.length(); i++) {
@@ -118,7 +118,7 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 					venue_photo = venue_photo_raw.substring(8);
 					
 
-					data[i] = new VenuesFactory(venue_id,title,address,rating,venue_lat,venue_lng,number_commited,venue_photo);
+					venue_data[i] = new VenuesFactory(venue_id,title,address,rating,venue_lat,venue_lng,number_commited,venue_photo);
 
 				}
 			}
@@ -290,9 +290,11 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 		
 		//According to Decending Timestamp value
 		Arrays.sort(wire_data);
+		
+		Arrays.sort(venue_data);
 
 				
-		callerActivity.setVenues(data);
+		callerActivity.setVenues(venue_data);
 		callerActivity.setWire(wire_data);
 		callerActivity.setUser(user_data);
 		callerActivity.setAdapter();
