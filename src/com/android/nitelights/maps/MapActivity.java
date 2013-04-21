@@ -49,7 +49,7 @@ public class MapActivity extends Activity {
 			        .title(venue.getTitle())
 			        .snippet(venue.getAddress())
 			        .icon(BitmapDescriptorFactory
-			        		.fromResource(R.drawable.map_marker)));	
+			        		.fromResource(R.drawable.new_map_marker)));	
 	    }
 	    
 		    // Move the camera instantly to mcgill with a zoom of 15.
