@@ -34,16 +34,7 @@ public class MapActivity extends Activity {
 		
 		//show the home button
 		actionBar.setDisplayHomeAsUpEnabled(true);
-		
-		Bundle bundle = getIntent().getExtras();
-		Parcelable[] parcels = bundle.getParcelableArray("VENUE_LIST");
-		
-		VenuesFactory[] venue_list = new VenuesFactory[parcels.length];
-		
-		for(int i=0;i<parcels.length;i++){
-			venue_list[i] = (VenuesFactory) parcels[i];
-		}
-		
+				
 	    map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map))
 		        .getMap();
 	    
@@ -52,7 +43,7 @@ public class MapActivity extends Activity {
 	    map.getUiSettings().setZoomControlsEnabled(true);
 	    map.getUiSettings().setCompassEnabled(true);
 	    
-	    for(VenuesFactory venue : venue_list){
+	    for(VenuesFactory venue : MainActivity.venue_data){
 	    	
 	    	map.addMarker(new MarkerOptions().position(new LatLng(venue.getLat(),venue.getLng()))
 			        .title(venue.getTitle())
