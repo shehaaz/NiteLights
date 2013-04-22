@@ -43,7 +43,7 @@ public class MapActivity extends Activity {
 	    map.getUiSettings().setZoomControlsEnabled(true);
 	    map.getUiSettings().setCompassEnabled(true);
 	    
-	    for(VenuesFactory venue : MainActivity.venue_data){
+	    for(VenuesFactory venue : MainActivity.getVenues()){
 	    	
 	    	map.addMarker(new MarkerOptions().position(new LatLng(venue.getLat(),venue.getLng()))
 			        .title(venue.getTitle())
