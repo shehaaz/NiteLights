@@ -11,14 +11,13 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.os.AsyncTask;
-import android.util.Log;
 
-import com.android.nitelights.R;
 import com.android.nitelights.profile.ProfileFactory;
 import com.android.nitelights.ui.MainActivity;
 import com.android.nitelights.venues.VenuesFactory;
 import com.android.nitelights.wire.WireFactory;
-
+import com.android.nitelights.wire.WireFriendFactory;
+import com.android.nitelights.wire.WireVenueFactory;
 /**
  * Background Async Task to Load all product by making HTTP Request
  * */
@@ -26,8 +25,8 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 
 	VenuesFactory venue_data[];
 	WireFactory wire_data[];
-	WireFactory wire_friends[];
-	WireFactory wire_venues[];
+	WireFriendFactory wire_friends[];
+	WireVenueFactory wire_venues[];
 	ProfileFactory user_data;
 	
 	JSONParser jParser = new JSONParser();
@@ -144,7 +143,7 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 				// products found
 				// Getting Array of venues
 				JSONArray wire = jObject_Wire.getJSONArray("wire");
-				wire_venues = new WireFactory[wire.length()];
+				wire_venues = new WireVenueFactory[wire.length()];
 
 				// looping through All Products
 				for (int i = 0; i < wire.length(); i++) {
@@ -153,11 +152,11 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 					wire_name = wire.getJSONObject(i).getString("name");
 					wire_title = wire.getJSONObject(i).getString("title");
 					wire_timestamp = wire.getJSONObject(i).getString("timestamp");
-					wire_venues[i] = new WireFactory(wire_name,wire_title,"Committed To",wire_timestamp);
+					wire_venues[i] = new WireVenueFactory(wire_name,wire_title,"Committed To",wire_timestamp);
 				}
 			}
 			else{
-				wire_venues = new WireFactory[] {new WireFactory("","","No Commit Activity","0")};
+				wire_venues = new WireVenueFactory[] {new WireVenueFactory("","","No Commit Activity","0")};
 			}
 		} catch (JSONException e) {
 			e.printStackTrace();
@@ -182,7 +181,7 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 				// products found
 				// Getting Array of venues
 				JSONArray wire_friendship = jObject_WireFriendship.getJSONArray("wire");
-				wire_friends = new WireFactory[wire_friendship.length()];
+				wire_friends = new WireFriendFactory[wire_friendship.length()];
 
 				// looping through All Products
 				for (int i = 0; i < wire_friendship.length(); i++) {
@@ -196,11 +195,11 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 					String[] Tokens = wire_variables_raw.split(firstDelims);
 				
 					wire_timestamp = wire_friendship.getJSONObject(i).getString("timestamp");
-					wire_friends[i] = new WireFactory(Tokens[2],Tokens[6],"is Friends With",wire_timestamp);
+					wire_friends[i] = new WireFriendFactory(Tokens[2],Tokens[6],"is Friends With",wire_timestamp);
 				}
 			}
 			else{
-				wire_friends = new WireFactory[] {new WireFactory("","","No Friend Activity",null)};
+				wire_friends = new WireFriendFactory[] {new WireFriendFactory("","","No Friend Activity",null)};
 			}
 		} catch (JSONException e) {
 			e.printStackTrace();
@@ -275,11 +274,9 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 	 * **/
 	protected void onPostExecute(String result) {
 		
-		if(!num_venues.equals("0")){
-		user_data.setCommittedVenue(user_venue_commit);
-		} else{
-		 user_data.setCommittedVenue("Y U NO PARTY?");	
-		}
+		//Setting the User's Commit
+		String NewCommittedVenue = (!num_venues.equals("0")) ? user_venue_commit :  "Y U NO PARTY?";
+		user_data.setCommittedVenue(NewCommittedVenue);
 		
 		//Copy venues and Friends data into wire
 		int wire_venuesLen = wire_venues.length;
@@ -287,6 +284,7 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 		wire_data = new WireFactory[wire_venuesLen + wire_friendsLen];
 		System.arraycopy(wire_friends, 0, wire_data, 0, wire_friendsLen);
 		System.arraycopy(wire_venues, 0, wire_data, wire_friendsLen, wire_venuesLen);
+		
 		
 		//According to Decending Timestamp value
 		Arrays.sort(wire_data);

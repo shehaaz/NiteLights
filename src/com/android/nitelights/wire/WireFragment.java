@@ -14,7 +14,7 @@ public class WireFragment extends ListFragment{
 WireFactory wire_data[];
 
 	public WireFragment(){
-		this.wire_data = MainActivity.wire_data;
+		this.wire_data = MainActivity.getWire();
 	}
 	
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){

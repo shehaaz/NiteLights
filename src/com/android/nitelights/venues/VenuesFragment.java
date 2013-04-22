@@ -26,7 +26,7 @@ public class VenuesFragment extends ListFragment{
 
 	//Constructor that gets the static venue_data fetched by the MainActivity
 	public VenuesFragment(){
-		this.venue_data = MainActivity.venue_data;
+		this.venue_data = MainActivity.getVenues();
 	}
 
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){

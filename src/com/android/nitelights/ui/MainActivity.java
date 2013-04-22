@@ -124,15 +124,26 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 
 	public void setVenues(VenuesFactory[] pVenues){
 		venue_data = pVenues;
-
+	}
+	
+	public static VenuesFactory[] getVenues(){
+		return venue_data;
 	}
 	
 	public void setWire(WireFactory[] pWire){
 		wire_data = pWire;
 	}
 	
+	public static WireFactory[] getWire(){
+		return wire_data;
+	}
+	
 	public void setUser(ProfileFactory pUser_data) {
 		user_data = pUser_data;
+	}
+	
+	public static ProfileFactory getUser(){
+		return user_data;
 	}
 	
 	public void setAdapter(){

@@ -32,7 +32,7 @@ public class ProfileFragment extends Fragment{
 	private ProgressDialog pDialog;
 
 	public ProfileFragment(){
-		user = MainActivity.user_data;
+		user = MainActivity.getUser();
 	}
 
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
