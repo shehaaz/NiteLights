@@ -19,7 +19,7 @@ import com.android.nitelights.wire.WireFactory;
 import com.android.nitelights.wire.WireFriendFactory;
 import com.android.nitelights.wire.WireVenueFactory;
 /**
- * Background Async Task to Load all product by making HTTP Request
+ * Background Async Task to Load all data from MySQL database by making HTTP Request
  * */
 public class LoadMySQLData extends AsyncTask<Object, String, String> {
 
@@ -266,7 +266,7 @@ public class LoadMySQLData extends AsyncTask<Object, String, String> {
 			e.printStackTrace();
 		}
 		
-		return null;
+		return "MySQLData_Success";
 	}
 
 	/**
